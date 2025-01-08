@@ -63,6 +63,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = '01_getting-started/basic_math';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Thoughts" href="../02_infusion-lab/Spring2.html" />
     <link rel="prev" title="1. Getting Started: Introduction to Jupyter and Python!" href="getting_started.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -163,7 +164,7 @@
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../intro.html">
-                    Welcome to your Jupyter Book
+                    Python for manufacturing engineers
                 </a>
             </li>
         </ul>
@@ -171,6 +172,10 @@
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="getting_started.html">1. Getting Started: Introduction to Jupyter and Python!</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">2. Basic operations inside Jupyter</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Infusion Lab</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../02_infusion-lab/Spring2.html">Thoughts</a></li>
 </ul>
 
     </div>
@@ -358,12 +363,31 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-libraries">2.1. Import libraries</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-math">2.2. Basic math</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plotting-using-matplotlib-package">2.3. Plotting using <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> package</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numerical-operation-using-numpy-package">2.4. Numerical operation using <code class="docutils literal notranslate"><span class="pre">numpy</span></code> package</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-coolprop-and-calculating-enthalpy-of-vaporization">2.5. Installing CoolProp and calculating Enthalpy of Vaporization</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">2.6. </a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-libraries">2.1. Import libraries</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#numpy">2.1.1. Numpy</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matplotlib">2.1.2. Matplotlib</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-basics">2.2. Python Basics</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-defining-variables">2.2.1. Example: Defining Variables</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example-context-injection-molding-process">2.2.1.1. Example context: Injection Molding Process</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#control-structures">2.3. Control Structures</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conditional-statements">2.3.1. Conditional statements</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example-context-vacuum-infusion-of-composites">2.3.1.1. Example context: Vacuum Infusion of Composites</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#loops">2.3.2. Loops</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#functions">2.3.3. Functions</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example-context-cooling-in-injection-molding">2.3.3.1. Example context: Cooling in Injection Molding</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plotting-using-matplotlib-package">2.4. Plotting using <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> package</a></li>
 </ul>
             </nav>
         </div>
@@ -385,6 +409,14 @@
 <p>Each cell has a type associated with it: “Code”, “Markdown”, “Raw”</p>
 <section id="import-libraries">
 <h2><span class="section-number">2.1. </span>Import libraries<a class="headerlink" href="#import-libraries" title="Link to this heading">#</a></h2>
+<p>Libraries in Python are collections of pre-written code that provide functionality for specific tasks or domains. They are essential tools for both beginners and advanced Python users because they save time, reduce the need to write code from scratch, and simplify complex tasks.</p>
+<section id="numpy">
+<h3><span class="section-number">2.1.1. </span>Numpy<a class="headerlink" href="#numpy" title="Link to this heading">#</a></h3>
+<p>NumPy (Numerical Python) is a library used for numerical computations. It is powerful for working with arrays, matrices, and mathematical functions.</p>
+</section>
+<section id="matplotlib">
+<h3><span class="section-number">2.1.2. </span>Matplotlib<a class="headerlink" href="#matplotlib" title="Link to this heading">#</a></h3>
+<p>Matplotlib is a library for creating static, interactive, and animated visualizations in Python. It allows you to create a variety of plots like lines, bars, and even contour or surface plots.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -394,229 +426,208 @@
 </div>
 </div>
 </section>
-<section id="basic-math">
-<h2><span class="section-number">2.2. </span>Basic math<a class="headerlink" href="#basic-math" title="Link to this heading">#</a></h2>
+</section>
+<section id="python-basics">
+<h2><span class="section-number">2.2. </span>Python Basics<a class="headerlink" href="#python-basics" title="Link to this heading">#</a></h2>
+<p><b>Variables</b>: Variables are placeholders used to store information or data in a program. For example, in manufacturing, you might use variables to represent parameters like injection pressure, mold temperature, or tensile strength. They allow you to work with data programmatically.</p>
+<p><b>Data Types</b>: Data types define the kind of data that can be stored in a variable. Common data types in Python include:</p>
+<ul class="simple">
+<li><p>Strings (<code class="docutils literal notranslate"><span class="pre">str</span></code>): Represent text, e.g., <code class="docutils literal notranslate"><span class="pre">&quot;Polypropylene&quot;</span></code>.</p></li>
+<li><p>Integers (<code class="docutils literal notranslate"><span class="pre">int</span></code>): Represent whole numbers, e.g., <code class="docutils literal notranslate"><span class="pre">100</span></code>.</p></li>
+<li><p>Floats (<code class="docutils literal notranslate"><span class="pre">float</span></code>): Represent decimal numbers, e.g., <code class="docutils literal notranslate"><span class="pre">80.5</span></code>.</p></li>
+<li><p>Booleans (<code class="docutils literal notranslate"><span class="pre">bool</span></code>): Represent <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code> values.</p></li>
+</ul>
+<p>Understanding variables and data types is crucial for defining and manipulating manufacturing parameters effectively in Python.</p>
+<section id="example-defining-variables">
+<h3><span class="section-number">2.2.1. </span>Example: Defining Variables<a class="headerlink" href="#example-defining-variables" title="Link to this heading">#</a></h3>
+<section id="example-context-injection-molding-process">
+<h4><span class="section-number">2.2.1.1. </span>Example context: Injection Molding Process<a class="headerlink" href="#example-context-injection-molding-process" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">b</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="mi">1</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">material</span> <span class="o">=</span> <span class="s2">&quot;Polypropylene&quot;</span>
+<span class="n">mold_temperature</span> <span class="o">=</span> <span class="mi">80</span>  <span class="c1"># in Celsius</span>
+<span class="n">injection_pressure</span> <span class="o">=</span> <span class="mi">100</span>  <span class="c1"># in MPa</span>
+<span class="n">cycle_time</span> <span class="o">=</span> <span class="mi">30</span>  <span class="c1"># in seconds</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># The print command allows you to display strings and variable values</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Material: </span><span class="si">{</span><span class="n">material</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Mold Temperature: </span><span class="si">{</span><span class="n">mold_temperature</span><span class="si">}</span><span class="s2"> °C&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Injection Pressure: </span><span class="si">{</span><span class="n">injection_pressure</span><span class="si">}</span><span class="s2"> MPa&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Cycle Time: </span><span class="si">{</span><span class="n">cycle_time</span><span class="si">}</span><span class="s2"> seconds&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Material: Polypropylene
+Mold Temperature: 80 °C
+Injection Pressure: 100 MPa
+Cycle Time: 30 seconds
 </pre></div>
 </div>
 </div>
 </div>
+</section>
+</section>
+</section>
+<section id="control-structures">
+<h2><span class="section-number">2.3. </span>Control Structures<a class="headerlink" href="#control-structures" title="Link to this heading">#</a></h2>
+<section id="conditional-statements">
+<h3><span class="section-number">2.3.1. </span>Conditional statements<a class="headerlink" href="#conditional-statements" title="Link to this heading">#</a></h3>
+<p>Conditional statements allow you to execute certain blocks of code based on specific conditions.</p>
+<section id="example-context-vacuum-infusion-of-composites">
+<h4><span class="section-number">2.3.1.1. </span>Example context: Vacuum Infusion of Composites<a class="headerlink" href="#example-context-vacuum-infusion-of-composites" title="Link to this heading">#</a></h4>
+<p>If you had data from an electronic vaccuum level sensor you could ensure a stable vacuum and flag when the pressure is above that level.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">c</span> <span class="o">=</span> <span class="mi">4</span> <span class="o">*</span> <span class="mi">4</span> <span class="c1"># multiply</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
-<span class="n">c</span> <span class="o">=</span> <span class="mi">4</span> <span class="o">**</span><span class="mi">2</span> <span class="c1"># exponentiate</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">vacuum_level</span> <span class="o">=</span> <span class="o">-</span><span class="mf">0.95</span>  <span class="c1"># in bar</span>
+<span class="n">target_vacuum</span> <span class="o">=</span> <span class="o">-</span><span class="mf">0.9</span>
+<span class="k">if</span> <span class="n">vacuum_level</span> <span class="o">&lt;</span> <span class="n">target_vacuum</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Warning: Vacuum level is below the target threshold. Check for leaks.&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Vacuum level is adequate for infusion.&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>16
-16
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warning: Vacuum level is below the target threshold. Check for leaks.
 </pre></div>
 </div>
 </div>
 </div>
+</section>
+</section>
+<section id="loops">
+<h3><span class="section-number">2.3.2. </span>Loops<a class="headerlink" href="#loops" title="Link to this heading">#</a></h3>
+<p>Loops allow you to repeat a block of code multiple times, which is useful for iterating over data or performing repetitive tasks.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">production_temperatures</span> <span class="o">=</span> <span class="p">[</span><span class="mi">200</span><span class="p">,</span> <span class="mi">205</span><span class="p">,</span> <span class="mi">210</span><span class="p">,</span> <span class="mi">215</span><span class="p">,</span> <span class="mi">220</span><span class="p">,</span> <span class="mi">225</span><span class="p">]</span>  <span class="c1"># in Celsius</span>
+<span class="n">threshold_temperature</span> <span class="o">=</span> <span class="mi">220</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">temp</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">production_temperatures</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">temp</span> <span class="o">&gt;</span> <span class="n">threshold_temperature</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Station </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">: Temperature = </span><span class="si">{</span><span class="n">temp</span><span class="si">}</span><span class="s2"> °C (Above Threshold)&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Station </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">: Temperature = </span><span class="si">{</span><span class="n">temp</span><span class="si">}</span><span class="s2"> °C (Within Limits)&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Station 1: Temperature = 200 °C (Within Limits)
+Station 2: Temperature = 205 °C (Within Limits)
+Station 3: Temperature = 210 °C (Within Limits)
+Station 4: Temperature = 215 °C (Within Limits)
+Station 5: Temperature = 220 °C (Within Limits)
+Station 6: Temperature = 225 °C (Above Threshold)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="functions">
+<h3><span class="section-number">2.3.3. </span>Functions<a class="headerlink" href="#functions" title="Link to this heading">#</a></h3>
+<p>Functions are reusable blocks of code designed to perform a specific task. They help make code modular and easier to understand.</p>
+<section id="example-context-cooling-in-injection-molding">
+<h4><span class="section-number">2.3.3.1. </span>Example context: Cooling in Injection Molding<a class="headerlink" href="#example-context-cooling-in-injection-molding" title="Link to this heading">#</a></h4>
+<p>Cooling rate depends on difference between mold and part temperature at the interface and the cycle time.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">calculate_cooling_rate</span><span class="p">(</span><span class="n">mold_temp</span><span class="p">,</span> <span class="n">part_temp</span><span class="p">,</span> <span class="n">cycle_time</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">mold_temp</span> <span class="o">-</span> <span class="n">part_temp</span><span class="p">)</span> <span class="o">/</span> <span class="n">cycle_time</span>
+
+<span class="n">part_temp</span> <span class="o">=</span> <span class="mi">50</span>  <span class="c1"># in Celsius</span>
+<span class="n">cooling_rate</span> <span class="o">=</span> <span class="n">calculate_cooling_rate</span><span class="p">(</span><span class="n">mold_temperature</span><span class="p">,</span> <span class="n">part_temp</span><span class="p">,</span> <span class="n">cycle_time</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Cooling rate: </span><span class="si">{</span><span class="n">cooling_rate</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> °C/s&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Cooling rate: 1.00 °C/s
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
 </section>
 <section id="plotting-using-matplotlib-package">
-<h2><span class="section-number">2.3. </span>Plotting using <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> package<a class="headerlink" href="#plotting-using-matplotlib-package" title="Link to this heading">#</a></h2>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">],[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span><span class="s1">&#39;-*b&#39;</span><span class="p">)</span> <span class="c1">## x array, y array and line or marker specifications</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;X values&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Y values&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;Y values&#39;)
-</pre></div>
-</div>
-<img alt="../_images/dd8189919972bfd3ca94c74b41a095591496e82df92bcdd3305403933a3be2f6.png" src="../_images/dd8189919972bfd3ca94c74b41a095591496e82df92bcdd3305403933a3be2f6.png" />
-</div>
-</div>
-</section>
-<section id="numerical-operation-using-numpy-package">
-<h2><span class="section-number">2.4. </span>Numerical operation using <code class="docutils literal notranslate"><span class="pre">numpy</span></code> package<a class="headerlink" href="#numerical-operation-using-numpy-package" title="Link to this heading">#</a></h2>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">50</span><span class="p">,</span><span class="n">num</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span> <span class="c1">## create a regular-spaced array from start to end and number of datapoints</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.5</span><span class="p">,</span><span class="n">num</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span> <span class="c1">## create a regular-spaced array from start to stop (excluding) with step size as input</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>50.0
-</pre></div>
-</div>
-</div>
+<h2><span class="section-number">2.4. </span>Plotting using <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> package<a class="headerlink" href="#plotting-using-matplotlib-package" title="Link to this heading">#</a></h2>
+<p>Example context: Tensile Test Data</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Stress (MPa)</p></th>
+<th class="head text-right"><p>Strain</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p>0</p></td>
+<td class="text-right"><p>0.0</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>50</p></td>
+<td class="text-right"><p>0.1</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>100</p></td>
+<td class="text-right"><p>0.2</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>150</p></td>
+<td class="text-right"><p>0.3</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>180</p></td>
+<td class="text-right"><p>0.4</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>190</p></td>
+<td class="text-right"><p>0.5</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>185</p></td>
+<td class="text-right"><p>0.6</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.5
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="s1">&#39;-*b&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x1628d02cbb0&gt;]
-</pre></div>
-</div>
-<img alt="../_images/16e70f46c4ed29ef33f709d3281963752ed71cdde6ebffeccafb951c919e18d1.png" src="../_images/16e70f46c4ed29ef33f709d3281963752ed71cdde6ebffeccafb951c919e18d1.png" />
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">60</span><span class="p">,</span><span class="n">num</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="s1">&#39;*b&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x1628d896f50&gt;]
-</pre></div>
-</div>
-<img alt="../_images/df484d9cb6d98ee451a6c9369680735330806f0c64a4bfd3834c6d84576accca.png" src="../_images/df484d9cb6d98ee451a6c9369680735330806f0c64a4bfd3834c6d84576accca.png" />
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.89179788, 0.51260389, 0.48431986, 0.00998684, 0.09571074,
-       0.87576686, 0.34972264, 0.08992638, 0.14381544, 0.51877392,
-       0.11071996, 0.38405748, 0.29510407, 0.79295017, 0.70438426])
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span><span class="n">high</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span><span class="n">size</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([77, 60, 94, 77, 53, 81, 53, 73, 73, 89, 95, 86])
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## did some plotting with sinx, cosx</span>
-<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;Sin(x)&#39;</span><span class="p">)</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Cos(x)&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x1628d02d5d0&gt;
-</pre></div>
-</div>
-<img alt="../_images/47a9fdb0d2c450c909f4437dc67511aae2709167112943cca6b40916dcd829df.png" src="../_images/47a9fdb0d2c450c909f4437dc67511aae2709167112943cca6b40916dcd829df.png" />
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## did some plotting with polynomials</span>
-<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">2</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span><span class="s1">&#39;x^2&#39;</span><span class="p">)</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">5</span> <span class="o">-</span> <span class="n">x</span> <span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;x^5 - x^2 + 1&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">strain</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">])</span>
+<span class="n">stress</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">150</span><span class="p">,</span> <span class="mi">180</span><span class="p">,</span> <span class="mi">190</span><span class="p">,</span> <span class="mi">185</span><span class="p">])</span>
 
-<span class="c1">## something that we did not cover in class:</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">([</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">])</span> <span class="c1">## restricts the x-axis limit from -10 to +10</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">([</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">])</span> <span class="c1">## restricts the y-axis limit from -10 to + 10</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Strain (%):&quot;</span><span class="p">,</span> <span class="n">strain</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Stress (MPa):&quot;</span><span class="p">,</span> <span class="n">stress</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(-10.0, 10.0)
-</pre></div>
-</div>
-<img alt="../_images/74a3b668fa7a313bdf338cb7047221b1f9e2714de8c3afeb4ccc606f4e4d2644.png" src="../_images/74a3b668fa7a313bdf338cb7047221b1f9e2714de8c3afeb4ccc606f4e4d2644.png" />
-</div>
-</div>
-</section>
-<section id="installing-coolprop-and-calculating-enthalpy-of-vaporization">
-<h2><span class="section-number">2.5. </span>Installing CoolProp and calculating Enthalpy of Vaporization<a class="headerlink" href="#installing-coolprop-and-calculating-enthalpy-of-vaporization" title="Link to this heading">#</a></h2>
-<p>install CoolProp by using:</p>
-<p>!pip install CoolProp</p>
-<p>or</p>
-<p>import sys
-!{sys.executable} -m pip install CoolProp</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">CoolProp.CoolProp</span> <span class="kn">import</span> <span class="n">PropsSI</span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Strain (%): [0.  0.1 0.2 0.3 0.4 0.5 0.6]
+Stress (MPa): [  0  50 100 150 180 190 185]
 </pre></div>
 </div>
 </div>
 </div>
+<p>Let’s plot the results!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># enthalpy of vaporization example</span>
-<span class="n">H_L</span> <span class="o">=</span> <span class="n">PropsSI</span><span class="p">(</span><span class="s1">&#39;H&#39;</span><span class="p">,</span> <span class="s1">&#39;P&#39;</span><span class="p">,</span> <span class="mi">101325</span><span class="p">,</span> <span class="s1">&#39;Q&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;water&#39;</span><span class="p">)</span>
-<span class="n">H_V</span> <span class="o">=</span> <span class="n">PropsSI</span><span class="p">(</span><span class="s1">&#39;H&#39;</span><span class="p">,</span> <span class="s1">&#39;P&#39;</span><span class="p">,</span> <span class="mi">101325</span><span class="p">,</span> <span class="s1">&#39;Q&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;water&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;the enthalpy of vaporization at P = 1 atm is:&quot;</span><span class="p">,</span><span class="nb">round</span><span class="p">((</span><span class="n">H_V</span> <span class="o">-</span> <span class="n">H_L</span><span class="p">)</span><span class="o">/</span><span class="mi">1000</span><span class="p">),</span> <span class="s1">&#39;kJ/kg&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## Plotting</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">=== Visualization ===&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">strain</span><span class="p">,</span> <span class="n">stress</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Stress vs. Strain in Tensile Test&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Strain (%)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Stress (MPa)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>the enthalpy of vaporization at P = 1 atm is: 2256 kJ/kg
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>=== Visualization ===
 </pre></div>
 </div>
+<img alt="../_images/b6670ada65d026f164f0d48f1e0cf08e60ada1631e7d59c3a573d2e894ac28cb.png" src="../_images/b6670ada65d026f164f0d48f1e0cf08e60ada1631e7d59c3a573d2e894ac28cb.png" />
 </div>
 </div>
-</section>
-<section id="id1">
-<h2><span class="section-number">2.6. </span><a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<p>Additional exercise: Can you calculate the Young’s modulus for this material using Python?</p>
 </section>
 </section>
 
@@ -659,6 +670,15 @@
         <p class="prev-next-title"><span class="section-number">1. </span>Getting Started: Introduction to Jupyter and Python!</p>
       </div>
     </a>
+    <a class="right-next"
+       href="../02_infusion-lab/Spring2.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Thoughts</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
@@ -676,12 +696,31 @@
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-libraries">2.1. Import libraries</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-math">2.2. Basic math</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plotting-using-matplotlib-package">2.3. Plotting using <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> package</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numerical-operation-using-numpy-package">2.4. Numerical operation using <code class="docutils literal notranslate"><span class="pre">numpy</span></code> package</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-coolprop-and-calculating-enthalpy-of-vaporization">2.5. Installing CoolProp and calculating Enthalpy of Vaporization</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">2.6. </a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-libraries">2.1. Import libraries</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#numpy">2.1.1. Numpy</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matplotlib">2.1.2. Matplotlib</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-basics">2.2. Python Basics</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-defining-variables">2.2.1. Example: Defining Variables</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example-context-injection-molding-process">2.2.1.1. Example context: Injection Molding Process</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#control-structures">2.3. Control Structures</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conditional-statements">2.3.1. Conditional statements</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example-context-vacuum-infusion-of-composites">2.3.1.1. Example context: Vacuum Infusion of Composites</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#loops">2.3.2. Loops</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#functions">2.3.3. Functions</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example-context-cooling-in-injection-molding">2.3.3.1. Example context: Cooling in Injection Molding</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plotting-using-matplotlib-package">2.4. Plotting using <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> package</a></li>
 </ul>
   </nav></div>
 
