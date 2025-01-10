@@ -11,4 +11,4 @@ parts:
       - file: 01_getting-started/basic_math
     - caption: Infusion Lab 
       chapters:
-      - file: 02_infusion-lab/Spring2
+      - file: 02_infusion-lab/InfusionLabRedacted
