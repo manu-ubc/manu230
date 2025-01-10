@@ -5,10 +5,9 @@ format: jb-book
 root: intro
 parts:
     - caption: Getting started with Python
-      numbered: True
       chapters: 
-      - file: 01_getting-started/getting_started
-      - file: 01_getting-started/basic_math
-    - caption: Infusion Lab 
+      - file: getting-started/python_introduction
+      - file: getting-started/basic_python_operations
+    - caption: Vacuum Infusion
       chapters:
-      - file: 02_infusion-lab/InfusionLabRedacted
+      - file: vacuum-infusion/vacuum_infusion_notebook
