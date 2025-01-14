@@ -65,7 +65,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'vacuum-infusion/vacuum_infusion_notebook';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="Basic operations inside Jupyter" href="../getting-started/basic_python_operations.html" />
+    <link rel="prev" title="Jupyter Notebook: Introduction to Pandas for Data Analysis" href="../getting-started/data_processing_pandas.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -172,7 +172,8 @@
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Getting started with Python</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/python_introduction.html">Getting Started: Introduction to Jupyter and Python!</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../getting-started/basic_python_operations.html">Basic operations inside Jupyter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/basic_python_operations.html">Jupyter and Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/data_processing_pandas.html">Jupyter Notebook: Introduction to Pandas for Data Analysis</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Vacuum Infusion</span></p>
 <ul class="current nav bd-sidenav">
@@ -843,26 +844,13 @@
 <p>Use the equation derived above to calculate permeability</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Calculate fibre volume fraction and phi</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Calculate fibre volume fraction and phi</span>
 <span class="c1"># vf = #input equation to calculate Vf based on FAW, t, fibre density</span>
 <span class="c1"># phi = #input equation for porosity</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;vf =&quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">vf</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;phi =&quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">phi</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">7</span><span class="p">],</span> <span class="n">line</span> <span class="mi">5</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1">#Calculate fibre volume fraction and phi</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="c1"># vf = #input equation to calculate Vf based on FAW, t, fibre density</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1"># phi = #input equation for porosity</span>
-<span class="ne">----&gt; </span><span class="mi">5</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;vf =&quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">vf</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;phi =&quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">phi</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
-
-<span class="ne">NameError</span>: name &#39;vf&#39; is not defined
+<span class="c1"># Print vf and phi</span>
+<span class="c1"># print(&quot;vf =&quot;, round(vf,2))</span>
+<span class="c1"># print(&quot;phi =&quot;, round(phi,2))</span>
 </pre></div>
 </div>
 </div>
@@ -872,15 +860,10 @@
 <h3>7. Calculate permeability<a class="headerlink" href="#calculate-permeability" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Calculate permeability</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Calculate permeability</span>
 <span class="c1"># K = #input equation, refer to Equation (10)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;K =&quot;</span><span class="p">,</span> <span class="n">K</span><span class="p">,</span> <span class="s2">&quot;m^2&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>K = 8.07322476670822e-12 m^2
+<span class="c1"># Print the K value</span>
+<span class="c1"># print(&quot;K =&quot;, K, &quot;m^2&quot;)</span>
 </pre></div>
 </div>
 </div>
@@ -924,12 +907,12 @@
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../getting-started/basic_python_operations.html"
+       href="../getting-started/data_processing_pandas.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Basic operations inside Jupyter</p>
+        <p class="prev-next-title">Jupyter Notebook: Introduction to Pandas for Data Analysis</p>
       </div>
     </a>
 </div>
