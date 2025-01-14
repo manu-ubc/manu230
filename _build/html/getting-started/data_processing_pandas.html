@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Typical Polymer Processing Data &#8212; MANU 230 Manufacturing Processes</title>
+    <title>Introduction to Pandas for Data Analysis &#8212; MANU 230 Manufacturing Processes</title>
   
   
   
@@ -172,12 +172,7 @@
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="python_introduction.html">Getting Started: Introduction to Jupyter and Python!</a></li>
 <li class="toctree-l1"><a class="reference internal" href="basic_python_operations.html">Jupyter and Python</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Typical Polymer Processing Data</a></li>
-
-
-
-
-
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Introduction to Pandas for Data Analysis</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Vacuum Infusion</span></p>
 <ul class="nav bd-sidenav">
@@ -426,7 +421,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Typical Polymer Processing Data</h1>
+    <h1>Introduction to Pandas for Data Analysis</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -436,14 +431,13 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Typical Polymer Processing Data</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#exploring-and-manipulating-data">Exploring and Manipulating Data</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#filtering-data-by-temperature">Filtering Data by temperature</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#plotting-temperature-profile">Plotting Temperature Profile</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#saving-the-dataset">Saving the Dataset</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#typical-polymer-processing-data">Typical Polymer Processing Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exploring-and-manipulating-data">Exploring and Manipulating Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#filtering-data-by-temperature">Filtering Data by temperature</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plotting-temperature-profile">Plotting Temperature Profile</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#saving-the-dataset">Saving the Dataset</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
 </ul>
-
             </nav>
         </div>
     </div>
@@ -454,7 +448,8 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <p>#Introduction to Pandas for Data Analysis</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="introduction-to-pandas-for-data-analysis">
+<h1>Introduction to Pandas for Data Analysis<a class="headerlink" href="#introduction-to-pandas-for-data-analysis" title="Link to this heading">#</a></h1>
 <p>In this notebook, we will explore the basics of using the Pandas library for data analysis. Pandas is a powerful tool for handling and analyzing structured data in Python, making it ideal for tasks like opening CSV files, performing operations on datasets, and visualizing results. Through practical examples, you’ll learn how to load data, manipulate it, and create insightful plots using Pandas.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -467,7 +462,7 @@
 </div>
 </div>
 <section id="typical-polymer-processing-data">
-<h1>Typical Polymer Processing Data<a class="headerlink" href="#typical-polymer-processing-data" title="Link to this heading">#</a></h1>
+<h2>Typical Polymer Processing Data<a class="headerlink" href="#typical-polymer-processing-data" title="Link to this heading">#</a></h2>
 <p>During polymer processing, the material undergoes a temperature cycle involving three stages:</p>
 <ol class="arabic simple">
 <li><p><strong>Heating</strong>: The temperature rises rapidly to the processing temperature.</p></li>
@@ -528,7 +523,7 @@
 </div>
 </section>
 <section id="exploring-and-manipulating-data">
-<h1>Exploring and Manipulating Data<a class="headerlink" href="#exploring-and-manipulating-data" title="Link to this heading">#</a></h1>
+<h2>Exploring and Manipulating Data<a class="headerlink" href="#exploring-and-manipulating-data" title="Link to this heading">#</a></h2>
 <p>We’ll explore the dataset to understand its structure and characteristics. This includes:</p>
 <ul class="simple">
 <li><p>Viewing basic information and the first few rows of the data.</p></li>
@@ -574,7 +569,7 @@ max    120.000000       180.000000
 </div>
 </section>
 <section id="filtering-data-by-temperature">
-<h1>Filtering Data by temperature<a class="headerlink" href="#filtering-data-by-temperature" title="Link to this heading">#</a></h1>
+<h2>Filtering Data by temperature<a class="headerlink" href="#filtering-data-by-temperature" title="Link to this heading">#</a></h2>
 <p>Filter data points where temperature is above 100°C</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -653,7 +648,7 @@ max    120.000000       180.000000
 </div>
 </section>
 <section id="plotting-temperature-profile">
-<h1>Plotting Temperature Profile<a class="headerlink" href="#plotting-temperature-profile" title="Link to this heading">#</a></h1>
+<h2>Plotting Temperature Profile<a class="headerlink" href="#plotting-temperature-profile" title="Link to this heading">#</a></h2>
 <p>Let’s visualize the temperature profile during polymer processing using a line plot.
 Plotting the temperature profile over time provides insights into the heating, holding, and cooling behavior of the polymer during processing.</p>
 <div class="cell docutils container">
@@ -676,7 +671,7 @@ Plotting the temperature profile over time provides insights into the heating, h
 </div>
 </section>
 <section id="saving-the-dataset">
-<h1>Saving the Dataset<a class="headerlink" href="#saving-the-dataset" title="Link to this heading">#</a></h1>
+<h2>Saving the Dataset<a class="headerlink" href="#saving-the-dataset" title="Link to this heading">#</a></h2>
 <p>To preserve the simulated dataset for future analysis or sharing, we’ll save it to a CSV file.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -695,7 +690,7 @@ Plotting the temperature profile over time provides insights into the heating, h
 </div>
 </section>
 <section id="summary">
-<h1>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h1>
+<h2>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h2>
 <p>This notebook covered:</p>
 <ul class="simple">
 <li><p>Creating a dataset for polymer processing temperature profiles</p></li>
@@ -703,6 +698,7 @@ Plotting the temperature profile over time provides insights into the heating, h
 <li><p>Visualizing the temperature profile over time with Matplotlib</p></li>
 <li><p>Saving the dataset to a CSV file</p></li>
 </ul>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -770,14 +766,13 @@ Plotting the temperature profile over time provides insights into the heating, h
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Typical Polymer Processing Data</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#exploring-and-manipulating-data">Exploring and Manipulating Data</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#filtering-data-by-temperature">Filtering Data by temperature</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#plotting-temperature-profile">Plotting Temperature Profile</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#saving-the-dataset">Saving the Dataset</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#typical-polymer-processing-data">Typical Polymer Processing Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exploring-and-manipulating-data">Exploring and Manipulating Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#filtering-data-by-temperature">Filtering Data by temperature</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plotting-temperature-profile">Plotting Temperature Profile</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#saving-the-dataset">Saving the Dataset</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
 </ul>
-
   </nav></div>
 
 </div></div>
