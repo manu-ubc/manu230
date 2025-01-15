@@ -9,6 +9,6 @@ parts:
       - file: getting-started/python_introduction
       - file: getting-started/basic_python_operations
       - file: getting-started/data_processing_pandas
-    - caption: Vacuum Infusion
+    - caption: Lab Notebooks
       chapters:
       - file: vacuum-infusion/vacuum_infusion_notebook
