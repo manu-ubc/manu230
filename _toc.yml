@@ -12,3 +12,4 @@ parts:
     - caption: Lab Notebooks
       chapters:
       - file: vacuum-infusion/vacuum_infusion_notebook
+      - file: prepreg/PrepregLab
