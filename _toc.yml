@@ -10,8 +10,7 @@ parts:
       - file: getting-started/basic_python_operations
       - file: getting-started/data_processing_pandas
     - caption: Lab Notebooks
+      numbered: 1
       chapters:
       - file: vacuum-infusion/vacuum_infusion_notebook
-    - caption: Prepreg
-      chapters:
-      - file: prepreg/PrepregLab
+      - file: prepreg/prepreg_notebook
