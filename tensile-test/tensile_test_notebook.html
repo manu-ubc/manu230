@@ -792,7 +792,7 @@ Ultimate Tensile Strength: 22.155556165099267 MPa
 <span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">dg_ultimate_tensile_strength</span><span class="o">+</span><span class="mi">5</span><span class="p">)</span>
 <span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Stress vs Strain Curve (Double Gate)&#39;</span><span class="p">)</span>
 <span class="c1"># Zoom in on the elastic region</span>
-<span class="n">elastic_region</span> <span class="o">=</span> <span class="n">double_gate</span><span class="p">[</span><span class="n">double_gate</span><span class="p">[</span><span class="s1">&#39;Engineering Strain&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mf">0.5</span><span class="p">]</span>
+<span class="n">elastic_region</span> <span class="o">=</span> <span class="n">double_gate</span><span class="p">[</span><span class="n">double_gate</span><span class="p">[</span><span class="s1">&#39;Engineering Strain&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mf">0.04</span><span class="p">]</span>
 <span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">elastic_region</span><span class="p">[</span><span class="s1">&#39;Engineering Strain&#39;</span><span class="p">],</span> <span class="n">elastic_region</span><span class="p">[</span><span class="s1">&#39;Engineering Stress&#39;</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Double Gate&#39;</span><span class="p">)</span>
 <span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">elastic_region</span><span class="p">[</span><span class="s1">&#39;Engineering Strain&#39;</span><span class="p">],</span> <span class="n">elastic_region</span><span class="p">[</span><span class="s1">&#39;Offset Line&#39;</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;0.2% Offset Line&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">)</span>
 <span class="c1"># find the strain at the yield strength</span>
@@ -800,7 +800,7 @@ Ultimate Tensile Strength: 22.155556165099267 MPa
 <span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Strain&#39;</span><span class="p">)</span>
 <span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Stress (MPa)&#39;</span><span class="p">)</span>
 <span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
-<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">dg_yield_strength</span><span class="o">+</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">dg_yield_strength</span><span class="o">+</span><span class="mi">5</span><span class="p">)</span>
 <span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Elastic Region (Double Gate)&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
@@ -808,7 +808,7 @@ Ultimate Tensile Strength: 22.155556165099267 MPa
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/1b3f823816e76fa4d6689a2eab41f90bdf05cb274ff5ac1b11a3c8e8c1a9dac2.png" src="../_images/1b3f823816e76fa4d6689a2eab41f90bdf05cb274ff5ac1b11a3c8e8c1a9dac2.png" />
+<img alt="../_images/17409adde138c6f024d01062c4daaf3abbfd2b883936594fd7bd6a1493f651ee.png" src="../_images/17409adde138c6f024d01062c4daaf3abbfd2b883936594fd7bd6a1493f651ee.png" />
 </div>
 </div>
 </section>
