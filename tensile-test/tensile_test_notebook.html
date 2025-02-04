@@ -432,11 +432,20 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-the-data">Load the Data</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plotting-the-raw-data">Plotting the Raw Data</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-and-plot-the-stress-strain-data">Calculate and Plot the Stress-Strain Data</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-the-tensile-properties">Calculate the Tensile Properties</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compare-the-tensile-properties">Compare the Tensile Properties</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#procedure">Procedure</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#import-the-required-libraries">0. Import the Required Libraries</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#load-the-data">1. Load the Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plotting-the-raw-data">2. Plotting the Raw Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-and-plot-the-stress-strain-data">3. Calculate and Plot the Stress-Strain Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-the-tensile-properties">4. Calculate the Tensile Properties</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#define-a-function-to-calculate-the-tensile-properties">4.1 Define a Function to Calculate the Tensile Properties</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#use-the-calculate-tensile-properties-function-to-calculate-the-tensile-properties">4.2 Use the <code class="docutils literal notranslate"><span class="pre">calculate_tensile_properties</span></code> Function to Calculate the Tensile Properties</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-the-tensile-properties-on-the-stress-strain-curve">4.3 Plot the Tensile Properties on the Stress-Strain Curve</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#compare-the-tensile-properties">5. Compare the Tensile Properties</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
 </ul>
             </nav>
@@ -460,6 +469,8 @@
 <p>Then these were tested in the Instron tensile testing machine to determine the tensile properties of the material.</p>
 <p>The tensile properties of a material are important for understanding how it will behave in a range of applications. The tensile properties of a material are determined by the molecular structure of the polymer, the processing conditions used to produce the material, and the test conditions used to measure the properties.</p>
 <p>You can also find the video on the tensile test <a class="reference external" href="https://youtu.be/BkNf2svhjV0">here</a>.</p>
+<section id="procedure">
+<h2>Procedure<a class="headerlink" href="#procedure" title="Link to this heading">#</a></h2>
 <p>In this notebook, we will:</p>
 <ul class="simple">
 <li><p>Load the data from the tensile tests as a pandas DataFrame</p></li>
@@ -468,6 +479,9 @@
 <li><p>Compare the tensile properties of the two specimens</p></li>
 </ul>
 <p>Let’s get started!</p>
+<section id="import-the-required-libraries">
+<h3>0. Import the Required Libraries<a class="headerlink" href="#import-the-required-libraries" title="Link to this heading">#</a></h3>
+<p>Like the other labs, we will start by importing the required libraries for data analysis (<code class="docutils literal notranslate"><span class="pre">pandas</span></code>, <code class="docutils literal notranslate"><span class="pre">numpy</span></code>) and visualization (<code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load the required libraries</span>
@@ -478,8 +492,9 @@
 </div>
 </div>
 </div>
+</section>
 <section id="load-the-data">
-<h2>Load the Data<a class="headerlink" href="#load-the-data" title="Link to this heading">#</a></h2>
+<h3>1. Load the Data<a class="headerlink" href="#load-the-data" title="Link to this heading">#</a></h3>
 <p>First, we need to load the data from the tensile tests. The data is stored in a csv file that contains the raw data from the tensile tests, including the load and displacement values recorded during the test.
 Make sure to replace the file name with the name of the csv file containing the data from your tensile tests.
 Your file should contain the following columns:</p>
@@ -496,7 +511,7 @@ Let’s load the data and take a look at the first few rows.</p>
 <span class="c1"># Load the csv file into a pandas DataFrame</span>
 <span class="n">file_name_single</span> <span class="o">=</span> <span class="s1">&#39;Specimen_RawData_single.csv&#39;</span> <span class="c1"># your file name here</span>
 <span class="c1"># start reading from the 4th row</span>
-<span class="n">single_gate</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">file_name_single</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">single_gate</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">file_name_single</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span> <span class="c1"># you might need to adjust the number of rows to skip</span>
 <span class="n">single_gate</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -562,7 +577,7 @@ Let’s load the data and take a look at the first few rows.</p>
 </div>
 </section>
 <section id="plotting-the-raw-data">
-<h2>Plotting the Raw Data<a class="headerlink" href="#plotting-the-raw-data" title="Link to this heading">#</a></h2>
+<h3>2. Plotting the Raw Data<a class="headerlink" href="#plotting-the-raw-data" title="Link to this heading">#</a></h3>
 <p>Let’s plot the raw data to plot the load vs extension curve.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -585,7 +600,7 @@ Let’s load the data and take a look at the first few rows.</p>
 </div>
 </section>
 <section id="calculate-and-plot-the-stress-strain-data">
-<h2>Calculate and Plot the Stress-Strain Data<a class="headerlink" href="#calculate-and-plot-the-stress-strain-data" title="Link to this heading">#</a></h2>
+<h3>3. Calculate and Plot the Stress-Strain Data<a class="headerlink" href="#calculate-and-plot-the-stress-strain-data" title="Link to this heading">#</a></h3>
 <p>However the raw data is not very useful for analysis. We need to calculate the stress and strain values from the raw data to plot the stress-strain curve.</p>
 <p>The <em>engineering stress</em> is calculated as the load divided by the original cross-sectional area of the specimen, and the <em>engineering strain</em> is calculated as the extension divided by the original length of the specimen.</p>
 <p>You will need to input the following values:</p>
@@ -655,7 +670,7 @@ Let’s load the data and take a look at the first few rows.</p>
 </div>
 </section>
 <section id="calculate-the-tensile-properties">
-<h2>Calculate the Tensile Properties<a class="headerlink" href="#calculate-the-tensile-properties" title="Link to this heading">#</a></h2>
+<h3>4. Calculate the Tensile Properties<a class="headerlink" href="#calculate-the-tensile-properties" title="Link to this heading">#</a></h3>
 <p>Now let’s calculate the tensile properties of the material from the stress-strain curve.</p>
 <p>The tensile properties we will calculate are:</p>
 <ul class="simple">
@@ -664,6 +679,9 @@ Let’s load the data and take a look at the first few rows.</p>
 <li><p>The <em>Ultimate Tensile Strength</em> is the maximum stress that the material can withstand before it breaks.</p></li>
 </ul>
 <p>We will calculate these properties for both the single gate and double gate specimens and compare them.</p>
+<section id="define-a-function-to-calculate-the-tensile-properties">
+<h4>4.1 Define a Function to Calculate the Tensile Properties<a class="headerlink" href="#define-a-function-to-calculate-the-tensile-properties" title="Link to this heading">#</a></h4>
+<p>Let’s define a function to calculate the tensile properties of the material from the stress-strain curve. Functions are a way to encapsulate code that performs a specific task, making it easier to reuse and maintain. The function will take the stress-strain data as input and return the Young’s Modulus, Yield Strength, and Ultimate Tensile Strength.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Calculate the tensile properties of the material</span>
@@ -671,7 +689,7 @@ Let’s load the data and take a look at the first few rows.</p>
 <span class="k">def</span> <span class="nf">linear_fit_through_origin</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
     <span class="c1"># Fit a line through the origin (intercept = 0) using linear algebra</span>
     <span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">([</span><span class="n">x</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">x</span><span class="p">)])</span><span class="o">.</span><span class="n">T</span>
-    <span class="n">slope</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">lstsq</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">rcond</span><span class="o">=</span><span class="kc">None</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">slope</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">lstsq</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">rcond</span><span class="o">=</span><span class="kc">None</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># uses a least-squares fit to find the slope</span>
     <span class="k">return</span> <span class="n">slope</span>
 
 <span class="k">def</span> <span class="nf">calculate_tensile_properties</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
@@ -687,7 +705,7 @@ Let’s load the data and take a look at the first few rows.</p>
     <span class="c1"># Find the intersection point of the stress-strain curve with a line parallel to the linear elastic region</span>
     <span class="n">offset</span> <span class="o">=</span> <span class="mf">0.002</span>
     <span class="n">offset_line</span> <span class="o">=</span> <span class="n">slope</span> <span class="o">*</span> <span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Engineering Strain&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">offset</span><span class="p">)</span>
-    <span class="n">yield_strength</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Engineering Stress&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">offset_line</span><span class="p">))</span><span class="o">.</span><span class="n">idxmin</span><span class="p">()][</span><span class="s1">&#39;Engineering Stress&#39;</span><span class="p">]</span>
+    <span class="n">yield_strength</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Engineering Stress&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">offset_line</span><span class="p">))</span><span class="o">.</span><span class="n">idxmin</span><span class="p">()][</span><span class="s1">&#39;Engineering Stress&#39;</span><span class="p">]</span> <span class="c1"># idxmin() returns the index of the minimum value</span>
 
     <span class="c1"># Calculate the Ultimate Tensile Strength</span>
     <span class="n">ultimate_tensile_strength</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;Engineering Stress&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
@@ -697,6 +715,9 @@ Let’s load the data and take a look at the first few rows.</p>
 </div>
 </div>
 </div>
+</section>
+<section id="use-the-calculate-tensile-properties-function-to-calculate-the-tensile-properties">
+<h4>4.2 Use the <code class="docutils literal notranslate"><span class="pre">calculate_tensile_properties</span></code> Function to Calculate the Tensile Properties<a class="headerlink" href="#use-the-calculate-tensile-properties-function-to-calculate-the-tensile-properties" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Calculate the tensile properties for the single gate specimen</span>
@@ -718,6 +739,9 @@ Ultimate Tensile Strength: 23.194457941483805 MPa
 </div>
 </div>
 </div>
+</section>
+<section id="plot-the-tensile-properties-on-the-stress-strain-curve">
+<h4>4.3 Plot the Tensile Properties on the Stress-Strain Curve<a class="headerlink" href="#plot-the-tensile-properties-on-the-stress-strain-curve" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Plot these values on the stress-strain curve</span>
@@ -812,8 +836,9 @@ Ultimate Tensile Strength: 22.155556165099267 MPa
 </div>
 </div>
 </section>
+</section>
 <section id="compare-the-tensile-properties">
-<h2>Compare the Tensile Properties<a class="headerlink" href="#compare-the-tensile-properties" title="Link to this heading">#</a></h2>
+<h3>5. Compare the Tensile Properties<a class="headerlink" href="#compare-the-tensile-properties" title="Link to this heading">#</a></h3>
 <p>Now that we have calculated the tensile properties for both the single gate and double gate specimens, let’s compare them.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -873,9 +898,11 @@ Ultimate Tensile Strength: 22.155556165099267 MPa
 </table>
 </div></div></div>
 </div>
-<p>The tensile properties of the single gate and double gate specimens are shown in the table above. These properties are pretty close to each other, indicating that the two specimens have similar mechanical properties. This is expected as the two specimens were produced using the same material and processing conditions.</p>
-<p>However, the strain at the break is different for the two specimens. Why is that?
-The strain at the break is a measure of the ductility of the material, which is the ability of the material to deform plastically before it breaks.</p>
+<p>The tensile properties of the single gate and double gate specimens are shown in the table above. These properties are pretty close to each other, indicating that the two specimens have similar mechanical properties. This is expected as the two specimens were produced using the same material.</p>
+<div class="admonition-think-about-it admonition">
+<p class="admonition-title">Think about it!</p>
+<p>The strain at the break is different for the two specimens. Why is that? How does the gate design affect the strain at the break?</p>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Calculate the strain at the break for the two specimens</span>
@@ -893,6 +920,7 @@ Strain at Break (Double Gate): 0.116807
 </div>
 </div>
 </div>
+</section>
 </section>
 <section id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h2>
@@ -961,11 +989,20 @@ Strain at Break (Double Gate): 0.116807
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-the-data">Load the Data</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plotting-the-raw-data">Plotting the Raw Data</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-and-plot-the-stress-strain-data">Calculate and Plot the Stress-Strain Data</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-the-tensile-properties">Calculate the Tensile Properties</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compare-the-tensile-properties">Compare the Tensile Properties</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#procedure">Procedure</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#import-the-required-libraries">0. Import the Required Libraries</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#load-the-data">1. Load the Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plotting-the-raw-data">2. Plotting the Raw Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-and-plot-the-stress-strain-data">3. Calculate and Plot the Stress-Strain Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-the-tensile-properties">4. Calculate the Tensile Properties</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#define-a-function-to-calculate-the-tensile-properties">4.1 Define a Function to Calculate the Tensile Properties</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#use-the-calculate-tensile-properties-function-to-calculate-the-tensile-properties">4.2 Use the <code class="docutils literal notranslate"><span class="pre">calculate_tensile_properties</span></code> Function to Calculate the Tensile Properties</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-the-tensile-properties-on-the-stress-strain-curve">4.3 Plot the Tensile Properties on the Stress-Strain Curve</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#compare-the-tensile-properties">5. Compare the Tensile Properties</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
 </ul>
   </nav></div>
