@@ -30,12 +30,13 @@ html:
   use_issues_button: true
   use_repository_button: true
   use_multitoc_numbering: true
-  
+  announcement: "<p>🚀 Help us improve this page! Share your thoughts <a href='survey-consent.html'>here.</a> 🚀</p>"
+
 launch_buttons:
   notebook_interface: "jupyterlab"  # or "classic"
   colab_url: "https://colab.research.google.com"
   deepnote_url: "https://deepnote.com"
-  thebe : true
+  thebe: true
   
 sphinx:
   extra_extensions: ["sphinx_multitoc_numbering"]
