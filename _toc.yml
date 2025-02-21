@@ -18,3 +18,4 @@ parts:
       - file: vacuum-infusion/vacuum_infusion_notebook
       - file: prepreg/prepreg_notebook
       - file: tensile-test/tensile_test_notebook
+      - file: spring-winding/SpringWinding_notebook
