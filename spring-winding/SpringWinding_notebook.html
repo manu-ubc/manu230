@@ -1,0 +1,950 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>4. Spring Winding Lab &#8212; MANU 230 Manufacturing Processes</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'spring-winding/SpringWinding_notebook';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="3. Injection Moulding and Tensile Testing" href="../tensile-test/tensile_test_notebook.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+<aside class="bd-header-announcement" aria-label="Announcement">
+  <div class="bd-header-announcement__content"><p>🚀 Help us improve this page! Share your thoughts <a href='survey-consent.html'>here.</a> 🚀</p></div>
+</aside>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="MANU 230 Manufacturing Processes - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="MANU 230 Manufacturing Processes - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Python for manufacturing engineers
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Getting started with Python</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/python_introduction.html">Introduction to Jupyter and Python!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/basic_python_operations.html">Basic operations in Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/data_processing_pandas.html">Data Processing with Pandas</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Help us improve</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../survey-consent.html">Study details</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Lab Notebooks</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../vacuum-infusion/vacuum_infusion_notebook.html">1. Vacuum Infusion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prepreg/prepreg_notebook.html">2. Prepreg Curing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tensile-test/tensile_test_notebook.html">3. Injection Moulding and Tensile Testing</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">4. Spring Winding Lab</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/manu-ubc/manu230/blob/main/spring-winding/SpringWinding_notebook.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2Fmanu-ubc%2Fmanu230%2Fblob%2Fmain%2Fspring-winding/SpringWinding_notebook.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Deepnote"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Deepnote logo" src="../_static/images/logo_deepnote.svg">
+  </span>
+<span class="btn__text-container">Deepnote</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/manu-ubc/manu230" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/manu-ubc/manu230/issues/new?title=Issue%20on%20page%20%2Fspring-winding/SpringWinding_notebook.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/spring-winding/SpringWinding_notebook.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Spring Winding Lab</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#safety-material-and-equipment">Safety, Material and Equipment</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spring-stiffness-calculations">Spring Stiffness Calculations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#follow-the-procedure-below-to-complete-the-lab-activity">Follow the procedure below to complete the lab activity</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#import-packages-and-define-variables">0. Import packages and define variables</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-the-desired-spring-stiffness">1. Calculate the desired spring stiffness</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-the-number-of-active-coils">2. Calculate the number of active coils</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#make-springs">3. Make springs</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#measure-spring-stiffness">4. Measure spring stiffness</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#compare-the-stiffness-of-your-group-s-batch-of-springs">5. Compare the stiffness of your group’s batch of springs</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#complete-the-lab-report">6. Complete the lab report</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#helpful-hint">Helpful Hint</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="spring-winding-lab">
+<h1><span class="section-number">4. </span>Spring Winding Lab<a class="headerlink" href="#spring-winding-lab" title="Link to this heading">#</a></h1>
+<p><strong>Objective:</strong> become familiar with a basic wire forming process as well as part to part variation in manufacturing by designing and manufacturing a number of springs to meet predefined objectives.</p>
+<p><strong>Method:</strong> design springs following the procedure below, manufacture multiples of the same spring design, investigate part to part variability by testing the stiffness of the springs and calculating basic statistical parameters.</p>
+<p><strong>Note:</strong> refer to the lab manual that is posted on Canvas for this lab activity. If there are discrepancies between this notebook and the lab manual, defer to the lab manual.</p>
+<p><strong>Hint:</strong> use this notebook as a starting point and edit/modify as you see fit. Review the whole sheet before you get started, there is a little hint at the end that might be useful.</p>
+<section id="safety-material-and-equipment">
+<h2>Safety, Material and Equipment<a class="headerlink" href="#safety-material-and-equipment" title="Link to this heading">#</a></h2>
+<p>Safety glasses are extremely important in this lab due the use of sharp wire.</p>
+<p>Hazards include:
+Sharp wire <br>
+Wire offcut projectiles <br>
+Wire cutting tool <br>
+Pinch hazard between wire and mandrel <br></p>
+<figure class="align-default" id="springtools">
+<a class="reference internal image-reference" href="../_images/SpringTools.png"><img alt="../_images/SpringTools.png" src="../_images/SpringTools.png" style="height: 300px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 4.1 </span><span class="caption-text">Tools and materials used in the lab</span><a class="headerlink" href="#springtools" title="Link to this image">#</a></p>
+<div class="legend">
+<figure class="align-default" id="springequipment">
+<a class="reference internal image-reference" href="../_images/SpringEquipment.png"><img alt="../_images/SpringEquipment.png" src="../_images/SpringEquipment.png" style="height: 250px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 4.2 </span><span class="caption-text">Equipment used in the lab</span><a class="headerlink" href="#springequipment" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+</figcaption>
+</figure>
+</section>
+<section id="spring-stiffness-calculations">
+<h2>Spring Stiffness Calculations<a class="headerlink" href="#spring-stiffness-calculations" title="Link to this heading">#</a></h2>
+<p>A spring’s stiffness or ‘rate’, <span class="math notranslate nohighlight">\(k\)</span> is defined as the amount of load to deflect the spring by a certain amount. This is typically reported at <span class="math notranslate nohighlight">\(N/m\)</span> or <span class="math notranslate nohighlight">\(lb/in\)</span>. <br></p>
+<p>Stiffness can be calculated with the following equation: <br>
+<span class="math notranslate nohighlight">\(k = \frac{d^4G}{8D^3N_a}\)</span> …(1)<br></p>
+<p>Where:<br>
+<span class="math notranslate nohighlight">\(d\)</span> is the wire diameter (<span class="math notranslate nohighlight">\(m\)</span> or more commonly <span class="math notranslate nohighlight">\(mm\)</span>)<br>
+<span class="math notranslate nohighlight">\(G\)</span> is the shear modulus of the wire material (<span class="math notranslate nohighlight">\(Pa\)</span> or more commonly <span class="math notranslate nohighlight">\(GPa\)</span>)<br>
+<span class="math notranslate nohighlight">\(D\)</span> is the average spring diameter (<span class="math notranslate nohighlight">\(OD_{spring} - d\)</span>) (<span class="math notranslate nohighlight">\(m\)</span> or more commonly <span class="math notranslate nohighlight">\(mm\)</span>)<br>
+<span class="math notranslate nohighlight">\(N_a\)</span> is the number of active coils in the spring <br>
+<br>
+For our lab activity, we would like to calculate the number of active coils required to acheive a desired spring stiffness. We can rearrange (1) to get (2): <br>
+<span class="math notranslate nohighlight">\(N_a = \frac{d^4G}{8D^3k}\)</span> …(2)<br></p>
+</section>
+<section id="follow-the-procedure-below-to-complete-the-lab-activity">
+<h2>Follow the procedure below to complete the lab activity<a class="headerlink" href="#follow-the-procedure-below-to-complete-the-lab-activity" title="Link to this heading">#</a></h2>
+<p>Choose an objective from one of the design scenarios below. Each member of your group will choose a different scenario.</p>
+<ol class="arabic simple">
+<li><p>Calculate the desired spring stiffness.</p></li>
+<li><p>Calculate the number of active coils in the spring to acheive the desired stiffness.</p></li>
+<li><p>Make the spring you designed. Everyone in your group will also make the same spring.</p></li>
+<li><p>Measure the spring stiffness.</p></li>
+<li><p>Compare the variation in spring stiffness of all the springs made by you and your group members.</p></li>
+<li><p>Prepare and submit your lab report.</p></li>
+</ol>
+<p>The following mandrel sizes are available:
+12 <span class="math notranslate nohighlight">\(mm\)</span>
+18 <span class="math notranslate nohighlight">\(mm\)</span>
+25 <span class="math notranslate nohighlight">\(mm\)</span></p>
+<p>The following wire gages are available:
+1 <span class="math notranslate nohighlight">\(mm\)</span>
+1.25 <span class="math notranslate nohighlight">\(mm\)</span>
+1.5 <span class="math notranslate nohighlight">\(mm\)</span></p>
+<p>The wire material is 304 Stainless Steel.</p>
+<p>Be aware that the springs will ‘spring back’ or unwind slightly after they are wound around the mandrels. The table below shows experimental data of the resulting outside diameter of various gage/mandrel combinations. Use this as the starting point in your calculations.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Gage/Mandrel</p></th>
+<th class="head"><p>12 mm</p></th>
+<th class="head"><p>18 mm</p></th>
+<th class="head"><p>25 mm</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1 mm</p></td>
+<td><p>17.1</p></td>
+<td><p>31.2</p></td>
+<td><p>52.4</p></td>
+</tr>
+<tr class="row-odd"><td><p>1.25 mm</p></td>
+<td><p>15.8</p></td>
+<td><p>27.8</p></td>
+<td><p>43.7</p></td>
+</tr>
+<tr class="row-even"><td><p>1.5 mm</p></td>
+<td><p>15.4</p></td>
+<td><p>25.8</p></td>
+<td><p>41.5</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Design Scenarios</strong> <br></p>
+<p>Each member in your group will select a different design scenario and design their own spring using the procedure below. <br></p>
+<p><strong>Scenario #1:</strong>
+You need a spring that will hold a piston in a 20 <span class="math notranslate nohighlight">\(mm\)</span> diameter cylinder. The mass of the piston is 800 <span class="math notranslate nohighlight">\(g\)</span> and it must deflect approximately 8 <span class="math notranslate nohighlight">\(mm\)</span>.</p>
+<p><strong>Scenario #2:</strong>
+You need a spring that is as short as possible and will hold a mass of 300 <span class="math notranslate nohighlight">\(g\)</span> and deflect no less than 100 <span class="math notranslate nohighlight">\(mm\)</span>.</p>
+<p><strong>Scenario #3</strong> You need the stiffest spring possible with three or more active coils.</p>
+<p><strong>Scenario #4:</strong> You need a spring that will hold 5 <span class="math notranslate nohighlight">\(kN\)</span> with approximately 20 <span class="math notranslate nohighlight">\(mm\)</span> of deflection using the smallest mandrel and wire gage.</p>
+<p><strong>Scenario #5:</strong> You need a spring that will hold 5 <span class="math notranslate nohighlight">\(kN\)</span> with approximately 20 <span class="math notranslate nohighlight">\(mm\)</span> of deflection using the largest mandrel and wire gage.</p>
+<p><strong>Scenario #6:</strong>
+You need the softest spring possible with five or less active coils.</p>
+<section id="import-packages-and-define-variables">
+<h3>0. Import packages and define variables<a class="headerlink" href="#import-packages-and-define-variables" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#import packages</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="kn">import</span> <span class="n">pi</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+
+<span class="c1">#Define variables</span>
+<span class="n">G</span> <span class="o">=</span> <span class="mi">70</span> <span class="o">*</span> <span class="mf">1e9</span> <span class="c1">#Pa (shear modulus of 304 stainless steel, note: G is typically reported in GPa)</span>
+
+<span class="c1">#refer to the table above for available wire gages</span>
+<span class="n">d</span> <span class="o">=</span> <span class="mf">1.25</span> <span class="o">/</span> <span class="mi">1000</span> <span class="c1">#m, wire gage (diameter)</span>
+
+<span class="c1">#D is the result of a combination of wire gage and mandrel diameter, select select it from the table above</span>
+<span class="n">D</span> <span class="o">=</span> <span class="p">(</span><span class="mf">27.8</span> <span class="o">-</span> <span class="n">d</span><span class="p">)</span> <span class="o">/</span> <span class="mi">1000</span> <span class="c1">#m, average spring diameter, which is equal to the OD of the spring minus the wire diameter</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="calculate-the-desired-spring-stiffness">
+<h3>1. Calculate the desired spring stiffness<a class="headerlink" href="#calculate-the-desired-spring-stiffness" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Define variables</span>
+<span class="n">F</span> <span class="o">=</span> <span class="p">(</span><span class="mi">500</span> <span class="o">/</span> <span class="mi">1000</span><span class="p">)</span> <span class="o">*</span> <span class="mf">9.81</span> <span class="c1">#N, input the load/force the spring must exert</span>
+<span class="n">s</span> <span class="o">=</span> <span class="mi">20</span> <span class="o">/</span> <span class="mi">1000</span> <span class="c1">#m, spring deflection, input the desired displacement of the spring under said load</span>
+
+<span class="c1">#Calculate spring stiffness</span>
+<span class="n">k</span> <span class="o">=</span> <span class="n">F</span> <span class="o">/</span> <span class="n">s</span> <span class="c1">#N/m</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Spring stiffness =&#39;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">k</span><span class="p">),</span><span class="s1">&#39; N/m&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Spring stiffness = 245  N/m
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="calculate-the-number-of-active-coils">
+<h3>2. Calculate the number of active coils<a class="headerlink" href="#calculate-the-number-of-active-coils" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Calculate the number of coils required to obtain desired spring stiffness</span>
+
+<span class="n">Na</span> <span class="o">=</span> <span class="p">(</span><span class="n">d</span><span class="o">**</span><span class="mi">4</span> <span class="o">*</span> <span class="n">G</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">8</span> <span class="o">*</span> <span class="n">D</span><span class="o">**</span><span class="mi">3</span> <span class="o">*</span> <span class="n">k</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Na = &#39;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">Na</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="s1">&#39;turns&#39;</span><span class="p">)</span>
+
+<span class="c1">#NOTE: PLEASE KEEP THE NUMBER OF ACTIVE COILS BELOW EIGHT</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Na =  4.1 turns
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="make-springs">
+<h3>3. Make springs<a class="headerlink" href="#make-springs" title="Link to this heading">#</a></h3>
+<p>Now that you have a design, make your spring using the spring winding apparatus. This video will show you how to perform this task:
+<a class="reference external" href="https://youtu.be/x1HTJAbvkuo">https://youtu.be/x1HTJAbvkuo</a></p>
+<p>Each student is responsible for one spring design, for making and measuring that design, and for making and measuring each of their group member’s designs. For example, in a team of five students, each student will make five springs of different designs.</p>
+<figure class="align-default" id="springwindingvideo">
+<a class="reference internal image-reference" href="../_images/SpringWindingVideo.png"><img alt="../_images/SpringWindingVideo.png" src="../_images/SpringWindingVideo.png" style="height: 150px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 4.3 </span><span class="caption-text">Spring winding video QR code</span><a class="headerlink" href="#springwindingvideo" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="measure-spring-stiffness">
+<h3>4. Measure spring stiffness<a class="headerlink" href="#measure-spring-stiffness" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Spring stiffness measurement </span>
+<span class="c1"># Use this code to help analyze your spring stiffness data and calculate k</span>
+
+<span class="c1"># Define your spring name</span>
+<span class="n">SpringName</span> <span class="o">=</span> <span class="s1">&#39;Spring 1&#39;</span>
+
+<span class="c1"># Create a dataframe to put measured data in</span>
+<span class="c1"># Specify column names</span>
+<span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Load_(N)&#39;</span><span class="p">,</span> <span class="s1">&#39;Deflection_(m)&#39;</span><span class="p">]</span>
+
+<span class="c1"># Input the measured data in a two column array where the first column is load and the second is displacement</span>
+<span class="c1"># **NOTE: keep track of your units, in this example we are inputting g and mm then converting to N and m </span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">284</span> <span class="p">,</span> <span class="mf">10.57</span><span class="p">],</span>
+    <span class="p">[</span><span class="mf">282.4</span> <span class="o">+</span> <span class="mi">284</span><span class="p">,</span> <span class="mf">18.57</span><span class="p">]</span>
+<span class="p">]</span>
+
+<span class="c1"># Create DataFrame</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">columns</span><span class="p">)</span>
+
+<span class="c1"># Convert mass to force</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Load_(N)&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Load_(N)&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="mi">1000</span> <span class="o">*</span> <span class="mf">9.81</span>
+
+<span class="c1"># Convert displacement to m</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Deflection_(m)&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Deflection_(m)&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="mi">1000</span>
+
+<span class="c1"># Find the slope of load vs displacement, this is the spring constant, k</span>
+<span class="n">slopeD</span><span class="p">,</span> <span class="n">intercept</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">polyfit</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Deflection_(m)&quot;</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;Load_(N)&quot;</span><span class="p">],</span> <span class="mi">1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The stiffness of&#39;</span><span class="p">,</span> <span class="n">SpringName</span><span class="p">,</span> <span class="s1">&#39;is&#39;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">slopeD</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span> <span class="s1">&#39;N/m&#39;</span><span class="p">)</span>
+
+<span class="c1"># Plot the data</span>
+<span class="n">df</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="s2">&quot;Deflection_(m)&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;Load_(N)&quot;</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;line&quot;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="n">SpringName</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Deflection (m)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Load (N)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Load vs Deflection&quot;</span><span class="p">)</span>
+
+<span class="c1"># Show the plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The stiffness of Spring 1 is 297.35 N/m
+</pre></div>
+</div>
+<img alt="../_images/76167f5aa1bc8092290ce93798e1c80cc464ba1d0657536d86bb7fd371d4bcc4.png" src="../_images/76167f5aa1bc8092290ce93798e1c80cc464ba1d0657536d86bb7fd371d4bcc4.png" />
+</div>
+</div>
+</section>
+<section id="compare-the-stiffness-of-your-group-s-batch-of-springs">
+<h3>5. Compare the stiffness of your group’s batch of springs<a class="headerlink" href="#compare-the-stiffness-of-your-group-s-batch-of-springs" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Input stiffness values for the five springs your group made and tested</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;Spring_ID&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Spring 1&quot;</span><span class="p">,</span> <span class="s2">&quot;Spring 2&quot;</span><span class="p">,</span> <span class="s2">&quot;Spring 3&quot;</span><span class="p">,</span> <span class="s2">&quot;Spring 4&quot;</span><span class="p">,</span> <span class="s2">&quot;Spring 5&quot;</span><span class="p">],</span> <span class="c1"># Spring names</span>
+    <span class="s2">&quot;Stiffness_k&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">350</span><span class="p">,</span> <span class="mi">370</span><span class="p">,</span> <span class="mi">340</span><span class="p">,</span> <span class="mi">360</span><span class="p">,</span> <span class="mi">355</span><span class="p">]</span>  <span class="c1"># Stiffness in N/m</span>
+<span class="p">}</span>
+
+<span class="c1"># Put that data into a Pandas data frame</span>
+<span class="n">df_k</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+<span class="c1"># Create a bar chart of stiffnesses</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="s2">&quot;Spring_ID&quot;</span><span class="p">,</span> <span class="n">height</span> <span class="o">=</span> <span class="s2">&quot;Stiffness_k&quot;</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">df_k</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Spring ID&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Stiffness (N/m)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Stiffness Across Spring Batch&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1"># Compute statistics</span>
+<span class="n">mean_k</span> <span class="o">=</span> <span class="n">df_k</span><span class="p">[</span><span class="s2">&quot;Stiffness_k&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">std_k</span> <span class="o">=</span> <span class="n">df_k</span><span class="p">[</span><span class="s2">&quot;Stiffness_k&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+<span class="n">min_k</span> <span class="o">=</span> <span class="n">df_k</span><span class="p">[</span><span class="s2">&quot;Stiffness_k&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+<span class="n">max_k</span> <span class="o">=</span> <span class="n">df_k</span><span class="p">[</span><span class="s2">&quot;Stiffness_k&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+<span class="n">cv_k</span> <span class="o">=</span> <span class="n">std_k</span> <span class="o">/</span> <span class="n">mean_k</span>  <span class="c1"># Coefficient of Variation (CV)</span>
+
+<span class="c1"># Print results</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Mean Stiffness: </span><span class="si">{</span><span class="n">mean_k</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> N/m&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Standard Deviation: </span><span class="si">{</span><span class="n">std_k</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> N/m&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Minimum Stiffness: </span><span class="si">{</span><span class="n">min_k</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> N/m&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Maximum Stiffness: </span><span class="si">{</span><span class="n">max_k</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> N/m&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Coefficient of Variation: </span><span class="si">{</span><span class="n">cv_k</span><span class="si">:</span><span class="s2">.2%</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/4537bbe9107f455a7a2b3258c1e49b089e057e371279117e9fe2e873000568c9.png" src="../_images/4537bbe9107f455a7a2b3258c1e49b089e057e371279117e9fe2e873000568c9.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mean Stiffness: 355.00 N/m
+Standard Deviation: 11.18 N/m
+Minimum Stiffness: 340.00 N/m
+Maximum Stiffness: 370.00 N/m
+Coefficient of Variation: 3.15%
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="complete-the-lab-report">
+<h3>6. Complete the lab report<a class="headerlink" href="#complete-the-lab-report" title="Link to this heading">#</a></h3>
+<p>Complete a lab report using the standard MANU 230 template. Please include the following: <br>
+-Details of your design <br>
+-The statistics calculated in Step 5 above <br>
+-Potential sources of part to part variation<br>
+-Comment on the repeatability of your group’s springs based on the statistics (was each spring close or were they quite off?) <br></p>
+<p>Please submit a copy of this notebook with your report.</p>
+<p>Refer to the lab manual posted on Canvas. If there are discrepancies between this notebook and the lab manual deferer to the lab manual.</p>
+<section id="helpful-hint">
+<h4>Helpful Hint<a class="headerlink" href="#helpful-hint" title="Link to this heading">#</a></h4>
+<p>For Step 5 you are asked to collaborate and bring your data together. One way to share you data is to create a shared spreadsheet document where everyone can enter their data, then you can export it as a CSV file and use the Pandas <code class="docutils literal notranslate"><span class="pre">read_csv</span></code> function to import it as a data frame then go from there. Below is some example code.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load the CSV file containing everyone&#39;s data</span>
+<span class="n">SpringStats</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;SpringStats.csv&quot;</span><span class="p">)</span>
+
+<span class="c1"># Print/display the data frame to review what it contains (note: NaN means not a number or in this case, an empty cell)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">SpringStats</span><span class="p">)</span>
+
+<span class="c1"># Here is an example of finding the mean of a row (not sure why you&#39;d want the mean load but...)</span>
+<span class="n">mean_load</span> <span class="o">=</span> <span class="n">SpringStats</span><span class="p">[</span><span class="s2">&quot;Spring3Load&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The mean load of Spring 3 is&#39;</span><span class="p">,</span> <span class="n">mean_load</span><span class="p">,</span> <span class="s1">&#39;N&#39;</span><span class="p">)</span>
+
+
+<span class="c1"># You could also plot everyone&#39;s data if you so desired</span>
+
+<span class="c1"># Create a plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+
+<span class="c1"># Plot each spring&#39;s data (dropping NaNs)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">SpringStats</span><span class="p">[</span><span class="s2">&quot;Spring1Def&quot;</span><span class="p">],</span> <span class="n">SpringStats</span><span class="p">[</span><span class="s2">&quot;Spring1Load&quot;</span><span class="p">],</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Spring 1&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">SpringStats</span><span class="p">[</span><span class="s2">&quot;Spring2Def&quot;</span><span class="p">],</span> <span class="n">SpringStats</span><span class="p">[</span><span class="s2">&quot;Spring2Load&quot;</span><span class="p">],</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;s&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Spring 2&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">SpringStats</span><span class="p">[</span><span class="s2">&quot;Spring3Def&quot;</span><span class="p">],</span> <span class="n">SpringStats</span><span class="p">[</span><span class="s2">&quot;Spring3Load&quot;</span><span class="p">],</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;^&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Spring 3&quot;</span><span class="p">)</span>
+
+<span class="c1"># Labels and title</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Deflection (mm)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Load (N)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Load vs. Deflection for Springs&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Show plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   Spring1Load  Spring1Def  Spring2Load  Spring2Def  Spring3Load  Spring3Def
+0        200.0        20.0        250.0        10.0          170          22
+1        400.0        40.0        300.0        30.0          340          44
+2        600.0        60.0        350.0        50.0          510          66
+3        800.0        80.0          NaN         NaN          680          88
+4          NaN         NaN          NaN         NaN          850         110
+The mean load of Spring 3 is 510.0 N
+</pre></div>
+</div>
+<img alt="../_images/bbc009ba7e00b8bf151d949546a2efc66775dee7f295872f4fd7a2628fd32de3.png" src="../_images/bbc009ba7e00b8bf151d949546a2efc66775dee7f295872f4fd7a2628fd32de3.png" />
+</div>
+</div>
+</section>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "manu-ubc/manu230",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./spring-winding"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../tensile-test/tensile_test_notebook.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">3. </span>Injection Moulding and Tensile Testing</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#safety-material-and-equipment">Safety, Material and Equipment</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spring-stiffness-calculations">Spring Stiffness Calculations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#follow-the-procedure-below-to-complete-the-lab-activity">Follow the procedure below to complete the lab activity</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#import-packages-and-define-variables">0. Import packages and define variables</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-the-desired-spring-stiffness">1. Calculate the desired spring stiffness</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-the-number-of-active-coils">2. Calculate the number of active coils</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#make-springs">3. Make springs</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#measure-spring-stiffness">4. Measure spring stiffness</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#compare-the-stiffness-of-your-group-s-batch-of-springs">5. Compare the stiffness of your group’s batch of springs</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#complete-the-lab-report">6. Complete the lab report</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#helpful-hint">Helpful Hint</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Meet Upadhyay, Dr. Casey Keulen
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

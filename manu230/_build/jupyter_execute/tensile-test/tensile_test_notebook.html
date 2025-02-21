@@ -1,0 +1,1075 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Injection Moulding and Tensile Testing &#8212; MANU 230 Manufacturing Processes</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'manu230/_build/jupyter_execute/tensile-test/tensile_test_notebook';</script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+<aside class="bd-header-announcement" aria-label="Announcement">
+  <div class="bd-header-announcement__content"><p>🚀 Help us improve this page! Share your thoughts <a href='survey-consent.html'>here.</a> 🚀</p></div>
+</aside>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../../_static/logo.png" class="logo__image only-light" alt="MANU 230 Manufacturing Processes - Home"/>
+    <img src="../../../../_static/logo.png" class="logo__image only-dark pst-js-only" alt="MANU 230 Manufacturing Processes - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../../intro.html">
+                    Python for manufacturing engineers
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Getting started with Python</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting-started/python_introduction.html">Introduction to Jupyter and Python!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting-started/basic_python_operations.html">Basic operations in Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting-started/data_processing_pandas.html">Data Processing with Pandas</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Help us improve</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../../survey-consent.html">Study details</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Lab Notebooks</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../../vacuum-infusion/vacuum_infusion_notebook.html">1. Vacuum Infusion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../prepreg/prepreg_notebook.html">2. Prepreg Curing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../tensile-test/tensile_test_notebook.html">3. Injection Moulding and Tensile Testing</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/manu-ubc/manu230/blob/main/manu230/_build/jupyter_execute/tensile-test/tensile_test_notebook.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../../../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2Fmanu-ubc%2Fmanu230%2Fblob%2Fmain%2Fmanu230/_build/jupyter_execute/tensile-test/tensile_test_notebook.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Deepnote"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Deepnote logo" src="../../../../_static/images/logo_deepnote.svg">
+  </span>
+<span class="btn__text-container">Deepnote</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/manu-ubc/manu230" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/manu-ubc/manu230/issues/new?title=Issue%20on%20page%20%2Fmanu230/_build/jupyter_execute/tensile-test/tensile_test_notebook.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../../_sources/manu230/_build/jupyter_execute/tensile-test/tensile_test_notebook.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Injection Moulding and Tensile Testing</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#procedure">Procedure</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#import-the-required-libraries">0. Import the Required Libraries</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#load-the-data">1. Load the Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plotting-the-raw-data">2. Plotting the Raw Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-and-plot-the-stress-strain-data">3. Calculate and Plot the Stress-Strain Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-the-tensile-properties">4. Calculate the Tensile Properties</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#define-a-function-to-calculate-the-tensile-properties">4.1 Define a Function to Calculate the Tensile Properties</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#use-the-calculate-tensile-properties-function-to-calculate-the-tensile-properties">4.2 Use the <code class="docutils literal notranslate"><span class="pre">calculate_tensile_properties</span></code> Function to Calculate the Tensile Properties</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-the-tensile-properties-on-the-stress-strain-curve">4.3 Plot the Tensile Properties on the Stress-Strain Curve</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#compare-the-tensile-properties">5. Compare the Tensile Properties</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="injection-moulding-and-tensile-testing">
+<h1>Injection Moulding and Tensile Testing<a class="headerlink" href="#injection-moulding-and-tensile-testing" title="Link to this heading">#</a></h1>
+<p>Injection moulding is a polymer shaping process that involves injecting a heated, molten polymer under high pressure into a mould cavity where it takes shape and solidifies before being ejected.</p>
+<p>In this lab, you produced two injection moulded dogbone specimens:</p>
+<ul class="simple">
+<li><p>Single gate tensile test</p></li>
+<li><p>Double gate tensile test</p></li>
+</ul>
+<p>Then these were tested in the Instron tensile testing machine to determine the tensile properties of the material.</p>
+<p>The tensile properties of a material are important for understanding how it will behave in a range of applications. The tensile properties of a material are determined by the molecular structure of the polymer, the processing conditions used to produce the material, and the test conditions used to measure the properties.</p>
+<p>You can also find the video on the tensile test <a class="reference external" href="https://youtu.be/BkNf2svhjV0">here</a>.</p>
+<section id="procedure">
+<h2>Procedure<a class="headerlink" href="#procedure" title="Link to this heading">#</a></h2>
+<p>In this notebook, we will:</p>
+<ul class="simple">
+<li><p>Load the data from the tensile tests as a pandas DataFrame</p></li>
+<li><p>Plot the stress-strain curves for the two specimens</p></li>
+<li><p>Calculate the tensile properties of the material</p></li>
+<li><p>Compare the tensile properties of the two specimens</p></li>
+</ul>
+<p>Let’s get started!</p>
+<section id="import-the-required-libraries">
+<h3>0. Import the Required Libraries<a class="headerlink" href="#import-the-required-libraries" title="Link to this heading">#</a></h3>
+<p>Like the other labs, we will start by importing the required libraries for data analysis (<code class="docutils literal notranslate"><span class="pre">pandas</span></code>, <code class="docutils literal notranslate"><span class="pre">numpy</span></code>) and visualization (<code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load the required libraries</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="load-the-data">
+<h3>1. Load the Data<a class="headerlink" href="#load-the-data" title="Link to this heading">#</a></h3>
+<p>First, we need to load the data from the tensile tests. The data is stored in a csv file that contains the raw data from the tensile tests, including the load and displacement values recorded during the test.
+Make sure to replace the file name with the name of the csv file containing the data from your tensile tests.
+Your file should contain the following columns:</p>
+<ul class="simple">
+<li><p>Time (s): the time in seconds since the test started</p></li>
+<li><p>Extension (mm): the extension of the specimen in mm</p></li>
+<li><p>Load (N): the load applied to the specimen in N</p></li>
+</ul>
+<p>Delete any rows in the csv file that contain text or other information that is not part of the raw data from the tensile test.
+Let’s load the data and take a look at the first few rows.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load the data from the tensile tests</span>
+<span class="c1"># Load the csv file into a pandas DataFrame</span>
+<span class="n">file_name_single</span> <span class="o">=</span> <span class="s1">&#39;Specimen_RawData_single.csv&#39;</span> <span class="c1"># your file name here</span>
+<span class="c1"># start reading from the 4th row</span>
+<span class="n">single_gate</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">file_name_single</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span> <span class="c1"># you might need to adjust the number of rows to skip</span>
+<span class="n">single_gate</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">5</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">file_name_single</span> <span class="o">=</span> <span class="s1">&#39;Specimen_RawData_single.csv&#39;</span> <span class="c1"># your file name here</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1"># start reading from the 4th row</span>
+<span class="ne">----&gt; </span><span class="mi">5</span> <span class="n">single_gate</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">file_name_single</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span> <span class="c1"># you might need to adjust the number of rows to skip</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">single_gate</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+
+<span class="nn">File ~\AppData\Local\anaconda3\Lib\site-packages\pandas\io\parsers\readers.py:948,</span> in <span class="ni">read_csv</span><span class="nt">(filepath_or_buffer, sep, delimiter, header, names, index_col, usecols, dtype, engine, converters, true_values, false_values, skipinitialspace, skiprows, skipfooter, nrows, na_values, keep_default_na, na_filter, verbose, skip_blank_lines, parse_dates, infer_datetime_format, keep_date_col, date_parser, date_format, dayfirst, cache_dates, iterator, chunksize, compression, thousands, decimal, lineterminator, quotechar, quoting, doublequote, escapechar, comment, encoding, encoding_errors, dialect, on_bad_lines, delim_whitespace, low_memory, memory_map, float_precision, storage_options, dtype_backend)</span>
+<span class="g g-Whitespace">    </span><span class="mi">935</span> <span class="n">kwds_defaults</span> <span class="o">=</span> <span class="n">_refine_defaults_read</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">936</span>     <span class="n">dialect</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">937</span>     <span class="n">delimiter</span><span class="p">,</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">944</span>     <span class="n">dtype_backend</span><span class="o">=</span><span class="n">dtype_backend</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">945</span> <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">946</span> <span class="n">kwds</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">kwds_defaults</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">948</span> <span class="k">return</span> <span class="n">_read</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="n">kwds</span><span class="p">)</span>
+
+<span class="nn">File ~\AppData\Local\anaconda3\Lib\site-packages\pandas\io\parsers\readers.py:611,</span> in <span class="ni">_read</span><span class="nt">(filepath_or_buffer, kwds)</span>
+<span class="g g-Whitespace">    </span><span class="mi">608</span> <span class="n">_validate_names</span><span class="p">(</span><span class="n">kwds</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;names&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">))</span>
+<span class="g g-Whitespace">    </span><span class="mi">610</span> <span class="c1"># Create the parser.</span>
+<span class="ne">--&gt; </span><span class="mi">611</span> <span class="n">parser</span> <span class="o">=</span> <span class="n">TextFileReader</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">613</span> <span class="k">if</span> <span class="n">chunksize</span> <span class="ow">or</span> <span class="n">iterator</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">614</span>     <span class="k">return</span> <span class="n">parser</span>
+
+<span class="nn">File ~\AppData\Local\anaconda3\Lib\site-packages\pandas\io\parsers\readers.py:1448,</span> in <span class="ni">TextFileReader.__init__</span><span class="nt">(self, f, engine, **kwds)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1445</span>     <span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">[</span><span class="s2">&quot;has_index_names&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">kwds</span><span class="p">[</span><span class="s2">&quot;has_index_names&quot;</span><span class="p">]</span>
+<span class="g g-Whitespace">   </span><span class="mi">1447</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span><span class="p">:</span> <span class="n">IOHandles</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="ne">-&gt; </span><span class="mi">1448</span> <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_make_engine</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">engine</span><span class="p">)</span>
+
+<span class="nn">File ~\AppData\Local\anaconda3\Lib\site-packages\pandas\io\parsers\readers.py:1705,</span> in <span class="ni">TextFileReader._make_engine</span><span class="nt">(self, f, engine)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1703</span>     <span class="k">if</span> <span class="s2">&quot;b&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">mode</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1704</span>         <span class="n">mode</span> <span class="o">+=</span> <span class="s2">&quot;b&quot;</span>
+<span class="ne">-&gt; </span><span class="mi">1705</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span> <span class="o">=</span> <span class="n">get_handle</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1706</span>     <span class="n">f</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1707</span>     <span class="n">mode</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1708</span>     <span class="n">encoding</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;encoding&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1709</span>     <span class="n">compression</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;compression&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1710</span>     <span class="n">memory_map</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;memory_map&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1711</span>     <span class="n">is_text</span><span class="o">=</span><span class="n">is_text</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1712</span>     <span class="n">errors</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;encoding_errors&quot;</span><span class="p">,</span> <span class="s2">&quot;strict&quot;</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1713</span>     <span class="n">storage_options</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;storage_options&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1714</span> <span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1715</span> <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+<span class="g g-Whitespace">   </span><span class="mi">1716</span> <span class="n">f</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span><span class="o">.</span><span class="n">handle</span>
+
+<span class="nn">File ~\AppData\Local\anaconda3\Lib\site-packages\pandas\io\common.py:863,</span> in <span class="ni">get_handle</span><span class="nt">(path_or_buf, mode, encoding, compression, memory_map, is_text, errors, storage_options)</span>
+<span class="g g-Whitespace">    </span><span class="mi">858</span> <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">handle</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">859</span>     <span class="c1"># Check whether the filename is to be opened in binary mode.</span>
+<span class="g g-Whitespace">    </span><span class="mi">860</span>     <span class="c1"># Binary mode does not support &#39;encoding&#39; and &#39;newline&#39;.</span>
+<span class="g g-Whitespace">    </span><span class="mi">861</span>     <span class="k">if</span> <span class="n">ioargs</span><span class="o">.</span><span class="n">encoding</span> <span class="ow">and</span> <span class="s2">&quot;b&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">ioargs</span><span class="o">.</span><span class="n">mode</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">862</span>         <span class="c1"># Encoding</span>
+<span class="ne">--&gt; </span><span class="mi">863</span>         <span class="n">handle</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">864</span>             <span class="n">handle</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">865</span>             <span class="n">ioargs</span><span class="o">.</span><span class="n">mode</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">866</span>             <span class="n">encoding</span><span class="o">=</span><span class="n">ioargs</span><span class="o">.</span><span class="n">encoding</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">867</span>             <span class="n">errors</span><span class="o">=</span><span class="n">errors</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">868</span>             <span class="n">newline</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">869</span>         <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">870</span>     <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">871</span>         <span class="c1"># Binary mode</span>
+<span class="g g-Whitespace">    </span><span class="mi">872</span>         <span class="n">handle</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">handle</span><span class="p">,</span> <span class="n">ioargs</span><span class="o">.</span><span class="n">mode</span><span class="p">)</span>
+
+<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;Specimen_RawData_single.csv&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="plotting-the-raw-data">
+<h3>2. Plotting the Raw Data<a class="headerlink" href="#plotting-the-raw-data" title="Link to this heading">#</a></h3>
+<p>Let’s plot the raw data to plot the load vs extension curve.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Plot the raw data</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">single_gate</span><span class="p">[</span><span class="s1">&#39;Extension&#39;</span><span class="p">],</span> <span class="n">single_gate</span><span class="p">[</span><span class="s1">&#39;Load&#39;</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Single Gate&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Extension (mm)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Load (N)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Load vs Extension Curve&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;Load vs Extension Curve&#39;)
+</pre></div>
+</div>
+<img alt="../../../../_images/ef0e2815356633396bbfe728adf41ff01495b1850e6430996fba185744aaeeb7.png" src="../../../../_images/ef0e2815356633396bbfe728adf41ff01495b1850e6430996fba185744aaeeb7.png" />
+</div>
+</div>
+</section>
+<section id="calculate-and-plot-the-stress-strain-data">
+<h3>3. Calculate and Plot the Stress-Strain Data<a class="headerlink" href="#calculate-and-plot-the-stress-strain-data" title="Link to this heading">#</a></h3>
+<p>However the raw data is not very useful for analysis. We need to calculate the stress and strain values from the raw data to plot the stress-strain curve.</p>
+<p>The <em>engineering stress</em> is calculated as the load divided by the original cross-sectional area of the specimen, and the <em>engineering strain</em> is calculated as the extension divided by the original length of the specimen.</p>
+<p>You will need to input the following values:</p>
+<ul class="simple">
+<li><p>Gauge length of the specimen (mm)</p></li>
+<li><p>Original width of the specimen (mm)</p></li>
+<li><p>Original thickness of the specimen (mm)</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Input the values for the gauge length, width and thickness of the specimen</span>
+<span class="n">sg_gauge_length</span> <span class="o">=</span> <span class="mi">20</span> <span class="c1"># mm</span>
+<span class="n">sg_width</span> <span class="o">=</span> <span class="mi">12</span> <span class="c1"># mm</span>
+<span class="n">sg_thickness</span> <span class="o">=</span> <span class="mf">3.19</span> <span class="c1"># mm</span>
+<span class="n">sg_cross_sectional_area</span> <span class="o">=</span> <span class="n">sg_width</span> <span class="o">*</span> <span class="n">sg_thickness</span>
+
+<span class="c1"># Calculate the engineering stress and strain</span>
+<span class="n">single_gate</span><span class="p">[</span><span class="s1">&#39;Engineering Stress&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">single_gate</span><span class="p">[</span><span class="s1">&#39;Load&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="n">sg_cross_sectional_area</span>
+<span class="n">single_gate</span><span class="p">[</span><span class="s1">&#39;Engineering Strain&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">single_gate</span><span class="p">[</span><span class="s1">&#39;Extension&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="n">sg_gauge_length</span>
+
+<span class="c1"># Plot the stress-strain curve</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">single_gate</span><span class="p">[</span><span class="s1">&#39;Engineering Strain&#39;</span><span class="p">],</span> <span class="n">single_gate</span><span class="p">[</span><span class="s1">&#39;Engineering Stress&#39;</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Single Gate&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Strain&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Stress (MPa)&#39;</span><span class="p">)</span> <span class="c1"># pay attention to the units</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Stress vs Strain Curve&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../../_images/6693617da8480ae41f3ce9ddc77cf42a4b4618a0f68b8c76d3c91f111927dac3.png" src="../../../../_images/6693617da8480ae41f3ce9ddc77cf42a4b4618a0f68b8c76d3c91f111927dac3.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load the data from the tensile tests for the second specimen</span>
+<span class="n">file_name_double</span> <span class="o">=</span> <span class="s1">&#39;Specimen_RawData_double.csv&#39;</span> <span class="c1"># your file name here</span>
+<span class="c1"># start reading from the 4th row</span>
+<span class="n">double_gate</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">file_name_double</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+<span class="c1"># Input the values for the gauge length, width and thickness of the specimen</span>
+<span class="n">dg_gauge_length</span> <span class="o">=</span> <span class="mi">20</span> <span class="c1"># mm</span>
+<span class="n">dg_width</span> <span class="o">=</span> <span class="mi">12</span> <span class="c1"># mm</span>
+<span class="n">dg_thickness</span> <span class="o">=</span> <span class="mf">3.19</span> <span class="c1"># mm</span>
+<span class="n">dg_cross_sectional_area</span> <span class="o">=</span> <span class="n">dg_width</span> <span class="o">*</span> <span class="n">dg_thickness</span>
+
+<span class="c1"># Calculate the engineering stress and strain</span>
+<span class="n">double_gate</span><span class="p">[</span><span class="s1">&#39;Engineering Stress&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">double_gate</span><span class="p">[</span><span class="s1">&#39;Load&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="n">dg_cross_sectional_area</span>
+<span class="n">double_gate</span><span class="p">[</span><span class="s1">&#39;Engineering Strain&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">double_gate</span><span class="p">[</span><span class="s1">&#39;Extension&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="n">dg_gauge_length</span>
+
+<span class="c1"># Plot the stress-strain curve for both specimens</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">single_gate</span><span class="p">[</span><span class="s1">&#39;Engineering Strain&#39;</span><span class="p">],</span> <span class="n">single_gate</span><span class="p">[</span><span class="s1">&#39;Engineering Stress&#39;</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Single Gate&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">double_gate</span><span class="p">[</span><span class="s1">&#39;Engineering Strain&#39;</span><span class="p">],</span> <span class="n">double_gate</span><span class="p">[</span><span class="s1">&#39;Engineering Stress&#39;</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Double Gate&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Strain&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Stress (MPa)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Stress vs Strain Curve&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../../_images/41a48d7be52b211c124a340740105b90aaed2084392c7132dfcd575d20b6bc98.png" src="../../../../_images/41a48d7be52b211c124a340740105b90aaed2084392c7132dfcd575d20b6bc98.png" />
+</div>
+</div>
+</section>
+<section id="calculate-the-tensile-properties">
+<h3>4. Calculate the Tensile Properties<a class="headerlink" href="#calculate-the-tensile-properties" title="Link to this heading">#</a></h3>
+<p>Now let’s calculate the tensile properties of the material from the stress-strain curve.</p>
+<p>The tensile properties we will calculate are:</p>
+<ul class="simple">
+<li><p>The <em>Young’s Modulus</em> is the slope of the stress-strain curve in the elastic region, and it represents the stiffness of the material.</p></li>
+<li><p>The <em>Yield Strength</em> is the stress at which the material starts to deform plastically. We will use the 0.2% offset method to calculate the yield strength as the transition point from elastic to plastic deformation is not always clear.</p></li>
+<li><p>The <em>Ultimate Tensile Strength</em> is the maximum stress that the material can withstand before it breaks.</p></li>
+</ul>
+<p>We will calculate these properties for both the single gate and double gate specimens and compare them.</p>
+<section id="define-a-function-to-calculate-the-tensile-properties">
+<h4>4.1 Define a Function to Calculate the Tensile Properties<a class="headerlink" href="#define-a-function-to-calculate-the-tensile-properties" title="Link to this heading">#</a></h4>
+<p>Let’s define a function to calculate the tensile properties of the material from the stress-strain curve. Functions are a way to encapsulate code that performs a specific task, making it easier to reuse and maintain. The function will take the stress-strain data as input and return the Young’s Modulus, Yield Strength, and Ultimate Tensile Strength.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Calculate the tensile properties of the material</span>
+<span class="c1"># Let us define a function to calculate the tensile properties</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">linear_fit_through_origin</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="c1"># Fit a line through the origin (intercept = 0) using linear algebra</span>
+    <span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">([</span><span class="n">x</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">x</span><span class="p">)])</span><span class="o">.</span><span class="n">T</span>
+    <span class="n">slope</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">lstsq</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">rcond</span><span class="o">=</span><span class="kc">None</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># uses a least-squares fit to find the slope</span>
+    <span class="k">return</span> <span class="n">slope</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">calculate_tensile_properties</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+    <span class="c1"># Calculate the Young&#39;s Modulus</span>
+    <span class="c1"># Fit a linear regression model to the elastic region of the stress-strain curve</span>
+    <span class="n">elastic_region</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Engineering Strain&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mf">0.02</span><span class="p">]</span> <span class="c1"># the strain value should be adjusted based on the data</span>
+    <span class="c1"># force the line to pass through the origin</span>
+    <span class="n">slope</span> <span class="o">=</span> <span class="n">linear_fit_through_origin</span><span class="p">(</span><span class="n">elastic_region</span><span class="p">[</span><span class="s1">&#39;Engineering Strain&#39;</span><span class="p">],</span> <span class="n">elastic_region</span><span class="p">[</span><span class="s1">&#39;Engineering Stress&#39;</span><span class="p">])</span>
+    <span class="n">youngs_modulus</span> <span class="o">=</span> <span class="n">slope</span>
+
+    <span class="c1"># Calculate the Yield Strength</span>
+    <span class="c1"># The yield strength is the stress at which the material starts to deform plastically (0.2% offset method)</span>
+    <span class="c1"># Find the intersection point of the stress-strain curve with a line parallel to the linear elastic region</span>
+    <span class="n">offset</span> <span class="o">=</span> <span class="mf">0.002</span>
+    <span class="n">offset_line</span> <span class="o">=</span> <span class="n">slope</span> <span class="o">*</span> <span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Engineering Strain&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">offset</span><span class="p">)</span>
+    <span class="n">yield_strength</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Engineering Stress&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">offset_line</span><span class="p">))</span><span class="o">.</span><span class="n">idxmin</span><span class="p">()][</span><span class="s1">&#39;Engineering Stress&#39;</span><span class="p">]</span> <span class="c1"># idxmin() returns the index of the minimum value</span>
+
+    <span class="c1"># Calculate the Ultimate Tensile Strength</span>
+    <span class="n">ultimate_tensile_strength</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;Engineering Stress&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+
+    <span class="k">return</span> <span class="n">youngs_modulus</span><span class="p">,</span> <span class="n">yield_strength</span><span class="p">,</span> <span class="n">ultimate_tensile_strength</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="use-the-calculate-tensile-properties-function-to-calculate-the-tensile-properties">
+<h4>4.2 Use the <code class="docutils literal notranslate"><span class="pre">calculate_tensile_properties</span></code> Function to Calculate the Tensile Properties<a class="headerlink" href="#use-the-calculate-tensile-properties-function-to-calculate-the-tensile-properties" title="Link to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Calculate the tensile properties for the single gate specimen</span>
+<span class="n">sg_youngs_modulus</span><span class="p">,</span> <span class="n">sg_yield_strength</span><span class="p">,</span> <span class="n">sg_ultimate_tensile_strength</span> <span class="o">=</span> <span class="n">calculate_tensile_properties</span><span class="p">(</span><span class="n">single_gate</span><span class="p">)</span>
+<span class="c1"># Print the tensile properties</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Single Gate Specimen:&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Young</span><span class="se">\&#39;</span><span class="s1">s Modulus:&#39;</span><span class="p">,</span> <span class="n">sg_youngs_modulus</span><span class="p">,</span> <span class="s1">&#39;MPa&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Yield Strength:&#39;</span><span class="p">,</span> <span class="n">sg_yield_strength</span><span class="p">,</span> <span class="s1">&#39;MPa&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Ultimate Tensile Strength:&#39;</span><span class="p">,</span> <span class="n">sg_ultimate_tensile_strength</span><span class="p">,</span> <span class="s1">&#39;MPa&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Single Gate Specimen:
+Young&#39;s Modulus: 808.0173008033751 MPa
+Yield Strength: 14.070024033437825 MPa
+Ultimate Tensile Strength: 23.194457941483805 MPa
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="plot-the-tensile-properties-on-the-stress-strain-curve">
+<h4>4.3 Plot the Tensile Properties on the Stress-Strain Curve<a class="headerlink" href="#plot-the-tensile-properties-on-the-stress-strain-curve" title="Link to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Plot these values on the stress-strain curve</span>
+<span class="c1"># add a column for the offset line in the linear region</span>
+<span class="n">single_gate</span><span class="p">[</span><span class="s1">&#39;Offset Line&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">sg_youngs_modulus</span> <span class="o">*</span> <span class="p">(</span><span class="n">single_gate</span><span class="p">[</span><span class="s1">&#39;Engineering Strain&#39;</span><span class="p">]</span><span class="o">-</span><span class="mf">0.002</span><span class="p">)</span>
+<span class="n">strain_at_yield</span> <span class="o">=</span> <span class="n">single_gate</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">single_gate</span><span class="p">[</span><span class="s1">&#39;Engineering Stress&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">sg_yield_strength</span><span class="p">))</span><span class="o">.</span><span class="n">idxmin</span><span class="p">()][</span><span class="s1">&#39;Engineering Strain&#39;</span><span class="p">]</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">single_gate</span><span class="p">[</span><span class="s1">&#39;Engineering Strain&#39;</span><span class="p">],</span> <span class="n">single_gate</span><span class="p">[</span><span class="s1">&#39;Engineering Stress&#39;</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Single Gate&#39;</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">single_gate</span><span class="p">[</span><span class="s1">&#39;Engineering Strain&#39;</span><span class="p">],</span> <span class="n">single_gate</span><span class="p">[</span><span class="s1">&#39;Offset Line&#39;</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;0.2% Offset Line&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">strain_at_yield</span><span class="p">,</span> <span class="n">sg_yield_strength</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Yield Strength&#39;</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Strain&#39;</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Stress (MPa)&#39;</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">sg_ultimate_tensile_strength</span><span class="o">+</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Stress vs Strain Curve (Single Gate)&#39;</span><span class="p">)</span>
+
+<span class="c1"># Zoom in on the elastic region</span>
+<span class="n">elastic_region</span> <span class="o">=</span> <span class="n">single_gate</span><span class="p">[</span><span class="n">single_gate</span><span class="p">[</span><span class="s1">&#39;Engineering Strain&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mf">0.5</span><span class="p">]</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">elastic_region</span><span class="p">[</span><span class="s1">&#39;Engineering Strain&#39;</span><span class="p">],</span> <span class="n">elastic_region</span><span class="p">[</span><span class="s1">&#39;Engineering Stress&#39;</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Single Gate&#39;</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">elastic_region</span><span class="p">[</span><span class="s1">&#39;Engineering Strain&#39;</span><span class="p">],</span> <span class="n">elastic_region</span><span class="p">[</span><span class="s1">&#39;Offset Line&#39;</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;0.2% Offset Line&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">)</span>
+<span class="c1"># find the strain at the yield strength</span>
+
+<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">strain_at_yield</span><span class="p">,</span> <span class="n">sg_yield_strength</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Yield Strength&#39;</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Strain&#39;</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Stress (MPa)&#39;</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">sg_yield_strength</span><span class="o">+</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Elastic Region (Single Gate)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../../_images/d32a638089dd652e35f6bbea4f8b92c70c71ba34509c48556c93aca1ba64b0bf.png" src="../../../../_images/d32a638089dd652e35f6bbea4f8b92c70c71ba34509c48556c93aca1ba64b0bf.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Calculate the tensile properties for the double gate specimen</span>
+<span class="n">dg_youngs_modulus</span><span class="p">,</span> <span class="n">dg_yield_strength</span><span class="p">,</span> <span class="n">dg_ultimate_tensile_strength</span> <span class="o">=</span> <span class="n">calculate_tensile_properties</span><span class="p">(</span><span class="n">double_gate</span><span class="p">)</span>
+<span class="c1"># Print the tensile properties</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Double Gate Specimen:&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Young</span><span class="se">\&#39;</span><span class="s1">s Modulus:&#39;</span><span class="p">,</span> <span class="n">dg_youngs_modulus</span><span class="p">,</span> <span class="s1">&#39;MPa&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Yield Strength:&#39;</span><span class="p">,</span> <span class="n">dg_yield_strength</span><span class="p">,</span> <span class="s1">&#39;MPa&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Ultimate Tensile Strength:&#39;</span><span class="p">,</span> <span class="n">dg_ultimate_tensile_strength</span><span class="p">,</span> <span class="s1">&#39;MPa&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Double Gate Specimen:
+Young&#39;s Modulus: 758.8634052019555 MPa
+Yield Strength: 13.76214420062696 MPa
+Ultimate Tensile Strength: 22.155556165099267 MPa
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Plot these values on the stress-strain curve</span>
+<span class="c1"># add a column for the offset line in the linear region</span>
+<span class="n">double_gate</span><span class="p">[</span><span class="s1">&#39;Offset Line&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dg_youngs_modulus</span> <span class="o">*</span> <span class="p">(</span><span class="n">double_gate</span><span class="p">[</span><span class="s1">&#39;Engineering Strain&#39;</span><span class="p">]</span><span class="o">-</span><span class="mf">0.002</span><span class="p">)</span>
+<span class="n">strain_at_yield</span> <span class="o">=</span> <span class="n">double_gate</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">double_gate</span><span class="p">[</span><span class="s1">&#39;Engineering Stress&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">dg_yield_strength</span><span class="p">))</span><span class="o">.</span><span class="n">idxmin</span><span class="p">()][</span><span class="s1">&#39;Engineering Strain&#39;</span><span class="p">]</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">double_gate</span><span class="p">[</span><span class="s1">&#39;Engineering Strain&#39;</span><span class="p">],</span> <span class="n">double_gate</span><span class="p">[</span><span class="s1">&#39;Engineering Stress&#39;</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Double Gate&#39;</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">double_gate</span><span class="p">[</span><span class="s1">&#39;Engineering Strain&#39;</span><span class="p">],</span> <span class="n">double_gate</span><span class="p">[</span><span class="s1">&#39;Offset Line&#39;</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;0.2% Offset Line&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">strain_at_yield</span><span class="p">,</span> <span class="n">dg_yield_strength</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Yield Strength&#39;</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Strain&#39;</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Stress (MPa)&#39;</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">dg_ultimate_tensile_strength</span><span class="o">+</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Stress vs Strain Curve (Double Gate)&#39;</span><span class="p">)</span>
+<span class="c1"># Zoom in on the elastic region</span>
+<span class="n">elastic_region</span> <span class="o">=</span> <span class="n">double_gate</span><span class="p">[</span><span class="n">double_gate</span><span class="p">[</span><span class="s1">&#39;Engineering Strain&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mf">0.04</span><span class="p">]</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">elastic_region</span><span class="p">[</span><span class="s1">&#39;Engineering Strain&#39;</span><span class="p">],</span> <span class="n">elastic_region</span><span class="p">[</span><span class="s1">&#39;Engineering Stress&#39;</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Double Gate&#39;</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">elastic_region</span><span class="p">[</span><span class="s1">&#39;Engineering Strain&#39;</span><span class="p">],</span> <span class="n">elastic_region</span><span class="p">[</span><span class="s1">&#39;Offset Line&#39;</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;0.2% Offset Line&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">)</span>
+<span class="c1"># find the strain at the yield strength</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">strain_at_yield</span><span class="p">,</span> <span class="n">dg_yield_strength</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Yield Strength&#39;</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Strain&#39;</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Stress (MPa)&#39;</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">dg_yield_strength</span><span class="o">+</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Elastic Region (Double Gate)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../../_images/17409adde138c6f024d01062c4daaf3abbfd2b883936594fd7bd6a1493f651ee.png" src="../../../../_images/17409adde138c6f024d01062c4daaf3abbfd2b883936594fd7bd6a1493f651ee.png" />
+</div>
+</div>
+</section>
+</section>
+<section id="compare-the-tensile-properties">
+<h3>5. Compare the Tensile Properties<a class="headerlink" href="#compare-the-tensile-properties" title="Link to this heading">#</a></h3>
+<p>Now that we have calculated the tensile properties for both the single gate and double gate specimens, let’s compare them.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Compare the tensile properties of the two specimens</span>
+<span class="c1"># Create a DataFrame to store the tensile properties</span>
+<span class="n">tensile_properties</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s1">&#39;Specimen&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Single Gate&#39;</span><span class="p">,</span> <span class="s1">&#39;Double Gate&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;Young</span><span class="se">\&#39;</span><span class="s1">s Modulus (MPa)&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">sg_youngs_modulus</span><span class="p">,</span> <span class="n">dg_youngs_modulus</span><span class="p">],</span>
+    <span class="s1">&#39;Yield Strength (MPa)&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">sg_yield_strength</span><span class="p">,</span> <span class="n">dg_yield_strength</span><span class="p">],</span>
+    <span class="s1">&#39;Ultimate Tensile Strength (MPa)&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">sg_ultimate_tensile_strength</span><span class="p">,</span> <span class="n">dg_ultimate_tensile_strength</span><span class="p">]</span>
+<span class="p">})</span>
+<span class="n">tensile_properties</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Specimen</th>
+      <th>Young's Modulus (MPa)</th>
+      <th>Yield Strength (MPa)</th>
+      <th>Ultimate Tensile Strength (MPa)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Single Gate</td>
+      <td>808.017301</td>
+      <td>14.070024</td>
+      <td>23.194458</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Double Gate</td>
+      <td>758.863405</td>
+      <td>13.762144</td>
+      <td>22.155556</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>The tensile properties of the single gate and double gate specimens are shown in the table above. These properties are pretty close to each other, indicating that the two specimens have similar mechanical properties. This is expected as the two specimens were produced using the same material.</p>
+<div class="admonition-think-about-it admonition">
+<p class="admonition-title">Think about it!</p>
+<p>The strain at the break is different for the two specimens. Why is that? How does the gate design affect the strain at the break?</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Calculate the strain at the break for the two specimens</span>
+<span class="n">sg_strain_at_break</span> <span class="o">=</span> <span class="n">single_gate</span><span class="p">[</span><span class="s1">&#39;Engineering Strain&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+<span class="n">dg_strain_at_break</span> <span class="o">=</span> <span class="n">double_gate</span><span class="p">[</span><span class="s1">&#39;Engineering Strain&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Strain at Break (Single Gate):&#39;</span><span class="p">,</span> <span class="n">sg_strain_at_break</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Strain at Break (Double Gate):&#39;</span><span class="p">,</span> <span class="n">dg_strain_at_break</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Strain at Break (Single Gate): 3.250094
+Strain at Break (Double Gate): 0.116807
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>We loaded the data from the tensile tests as a pandas DataFrame and plotted the stress-strain curves for the two specimens.</p></li>
+<li><p>We calculated the tensile properties of the material, including the Young’s Modulus, Yield Strength, and Ultimate Tensile Strength, for both specimens.</p></li>
+<li><p>We compared the tensile properties of the two specimens and found that they are similar.</p></li>
+<li><p>We also calculated the strain at the break for the two specimens and found that it is different.</p></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "manu-ubc/manu230",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./manu230\_build\jupyter_execute\tensile-test"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#procedure">Procedure</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#import-the-required-libraries">0. Import the Required Libraries</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#load-the-data">1. Load the Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plotting-the-raw-data">2. Plotting the Raw Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-and-plot-the-stress-strain-data">3. Calculate and Plot the Stress-Strain Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-the-tensile-properties">4. Calculate the Tensile Properties</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#define-a-function-to-calculate-the-tensile-properties">4.1 Define a Function to Calculate the Tensile Properties</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#use-the-calculate-tensile-properties-function-to-calculate-the-tensile-properties">4.2 Use the <code class="docutils literal notranslate"><span class="pre">calculate_tensile_properties</span></code> Function to Calculate the Tensile Properties</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-the-tensile-properties-on-the-stress-strain-curve">4.3 Plot the Tensile Properties on the Stress-Strain Curve</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#compare-the-tensile-properties">5. Compare the Tensile Properties</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Meet Upadhyay, Dr. Casey Keulen
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
