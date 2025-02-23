@@ -22,5 +22,5 @@ Data will be analyzed by Meet Upadhyay, Ph.D. candidate in Materials Engineering
  If you have any concerns or complaints about your rights as a research participant and/or your experiences while participating in this study, contact the Research Participant Complaint Line in the UBC Office of Research Ethics at 604-822-8598 or if long distance e-mail RSIL@ors.ubc.ca or call toll free 1-877-822-8598.
 ## Consent
  Your participation in this study is entirely voluntary, and you may refuse to participate or withdraw from it at any time. Your responses will be anonymized using your unique code and will not be linked to your identity. The responses may also be used in presentations and publications and be made available to research journals. By completing this survey, you consent to participate in this study and having your responses included in the analyses. 
-## Study link
+## Survey link
 Click on this link to reach the qualtrics study: https://ubc.ca1.qualtrics.com/jfe/form/SV_56hySFncNyUz1Bk
