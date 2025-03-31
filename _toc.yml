@@ -19,3 +19,4 @@ parts:
       - file: prepreg/prepreg_notebook
       - file: tensile-test/tensile_test_notebook
       - file: spring-winding/SpringWinding_notebook
+      - file: newton-cooling/notebook_empty
