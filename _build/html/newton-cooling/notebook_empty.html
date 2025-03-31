@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>5. Inverse Simulation of Newton’s Law of Cooling &#8212; MANU 230 Manufacturing Processes</title>
+    <title>Inverse Simulation of Newton’s Law of Cooling &#8212; MANU 230 Manufacturing Processes</title>
   
   
   
@@ -65,7 +65,8 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'newton-cooling/notebook_empty';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="4. Spring Winding Lab" href="../spring-winding/SpringWinding_notebook.html" />
+    <link rel="next" title="Study details" href="../survey-consent.html" />
+    <link rel="prev" title="Data Processing with Pandas" href="../getting-started/data_processing_pandas.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -173,23 +174,22 @@
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Getting started with Python</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/python_introduction.html">Introduction to Jupyter and Python!</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/basic_python_operations.html">Basic operations in Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/data_processing_pandas.html">Data Processing with Pandas</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Inverse Simulation of Newton’s Law of Cooling</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Help us improve</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../survey-consent.html">Study details</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Lab Notebooks</span></p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../vacuum-infusion/vacuum_infusion_notebook.html">1. Vacuum Infusion</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../prepreg/prepreg_notebook.html">2. Prepreg Curing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tensile-test/tensile_test_notebook.html">3. Injection Moulding and Tensile Testing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../spring-winding/SpringWinding_notebook.html">4. Spring Winding Lab</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">5. Inverse Simulation of Newton’s Law of Cooling</a></li>
-
 </ul>
 
     </div>
@@ -444,11 +444,8 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">5. Inverse Simulation of Newton’s Law of Cooling</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#experimental-setup">Experimental Setup</a></li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#import-necessary-libraries">6. 0. Import necessary libraries</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-necessary-libraries">0. Import necessary libraries</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#define-the-parameters">1. Define the parameters</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simulate-the-cooling-process">2. Simulate the cooling process</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-the-results">3. Plot the results</a></li>
@@ -457,9 +454,6 @@
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overlap-the-simulation-with-the-experimental-data">6. Overlap the simulation with the experimental data</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#estimate-the-cooling-constant-k">7. Estimate the cooling constant k</a></li>
 </ul>
-</li>
-</ul>
-
             </nav>
         </div>
     </div>
@@ -471,10 +465,10 @@
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="inverse-simulation-of-newton-s-law-of-cooling">
-<h1><span class="section-number">5. </span>Inverse Simulation of Newton’s Law of Cooling<a class="headerlink" href="#inverse-simulation-of-newton-s-law-of-cooling" title="Link to this heading">#</a></h1>
+<h1>Inverse Simulation of Newton’s Law of Cooling<a class="headerlink" href="#inverse-simulation-of-newton-s-law-of-cooling" title="Link to this heading">#</a></h1>
 <p>We will use the Newton’s Law of Cooling to simulate the temperature of a body that is cooling down. The Newton’s Law of Cooling is given by the following differential equation:
 $<span class="math notranslate nohighlight">\(
-\frac{dT}{dt} = -k(T - T_a)
+    \frac{dT}{dt} = -k(T - T_a)
 \)</span>$
 where:</p>
 <ul class="simple">
@@ -484,7 +478,7 @@ where:</p>
 <li><p><span class="math notranslate nohighlight">\(\frac{dT}{dt}\)</span> is the rate of change of temperature with respect to time.
 The solution to this differential equation is given by:
 $<span class="math notranslate nohighlight">\(
-T(t) = T_a + (T_0 - T_a)e^{-kt}
+  T(t) = T_a + (T_0 - T_a)e^{-kt}
 \)</span><span class="math notranslate nohighlight">\(
 We will try to estimate the cooling constant \)</span>k$ in this notebook.</p></li>
 </ul>
@@ -494,13 +488,12 @@ We will try to estimate the cooling constant \)</span>k$ in this notebook.</p></
 <figure class="align-default" id="setup">
 <a class="reference internal image-reference" href="../_images/Setup.png"><img alt="../_images/Setup.png" src="../_images/Setup.png" style="width: 500px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 5.1 </span><span class="caption-text">Experimental Setup</span><a class="headerlink" href="#setup" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 1 </span><span class="caption-text">Experimental Setup</span><a class="headerlink" href="#setup" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="import-necessary-libraries">
-<h1><span class="section-number">6. </span>0. Import necessary libraries<a class="headerlink" href="#import-necessary-libraries" title="Link to this heading">#</a></h1>
+<section id="import-necessary-libraries">
+<h2>0. Import necessary libraries<a class="headerlink" href="#import-necessary-libraries" title="Link to this heading">#</a></h2>
 <p>We will need libraries like <code class="docutils literal notranslate"><span class="pre">numpy</span></code> to perform and <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> to plot the simulation results. The <code class="docutils literal notranslate"><span class="pre">pandas</span></code> library will be used to read the experimental data.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -512,6 +505,7 @@ We will try to estimate the cooling constant \)</span>k$ in this notebook.</p></
 </div>
 </div>
 </div>
+</section>
 <section id="define-the-parameters">
 <h2>1. Define the parameters<a class="headerlink" href="#define-the-parameters" title="Link to this heading">#</a></h2>
 <p>We will define the parameters of the simulation such as the initial temperature <span class="math notranslate nohighlight">\(T_0\)</span>, the ambient temperature <span class="math notranslate nohighlight">\(T_a\)</span>, the cooling constant <span class="math notranslate nohighlight">\(k\)</span>, and the time step <span class="math notranslate nohighlight">\(\Delta t\)</span>. We will also define the time interval over which we want to simulate the cooling.</p>
@@ -732,13 +726,22 @@ We will use the <code class="docutils literal notranslate"><span class="pre">num
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../spring-winding/SpringWinding_notebook.html"
+       href="../getting-started/data_processing_pandas.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">4. </span>Spring Winding Lab</p>
+        <p class="prev-next-title">Data Processing with Pandas</p>
       </div>
+    </a>
+    <a class="right-next"
+       href="../survey-consent.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Study details</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -757,11 +760,8 @@ We will use the <code class="docutils literal notranslate"><span class="pre">num
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">5. Inverse Simulation of Newton’s Law of Cooling</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#experimental-setup">Experimental Setup</a></li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#import-necessary-libraries">6. 0. Import necessary libraries</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-necessary-libraries">0. Import necessary libraries</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#define-the-parameters">1. Define the parameters</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simulate-the-cooling-process">2. Simulate the cooling process</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-the-results">3. Plot the results</a></li>
@@ -770,9 +770,6 @@ We will use the <code class="docutils literal notranslate"><span class="pre">num
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overlap-the-simulation-with-the-experimental-data">6. Overlap the simulation with the experimental data</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#estimate-the-cooling-constant-k">7. Estimate the cooling constant k</a></li>
 </ul>
-</li>
-</ul>
-
   </nav></div>
 
 </div></div>
