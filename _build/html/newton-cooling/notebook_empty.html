@@ -467,20 +467,14 @@
   <section class="tex2jax_ignore mathjax_ignore" id="inverse-simulation-of-newton-s-law-of-cooling">
 <h1>Inverse Simulation of Newton’s Law of Cooling<a class="headerlink" href="#inverse-simulation-of-newton-s-law-of-cooling" title="Link to this heading">#</a></h1>
 <p>We will use the Newton’s Law of Cooling to simulate the temperature of a body that is cooling down. The Newton’s Law of Cooling is given by the following differential equation:
-$<span class="math notranslate nohighlight">\(
-  \frac{dT}{dt} = -k(T - T_a)
-\)</span>$
-where:</p>
+$<span class="math notranslate nohighlight">\(  rac{dT}{dt} = -k(T - T_a)\)</span>$where:</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(T\)</span> is the temperature of the body at time <span class="math notranslate nohighlight">\(t\)</span>,</p></li>
 <li><p><span class="math notranslate nohighlight">\(T_a\)</span> is the ambient temperature,</p></li>
 <li><p><span class="math notranslate nohighlight">\(k\)</span> is the cooling constant,</p></li>
 <li><p><span class="math notranslate nohighlight">\(\frac{dT}{dt}\)</span> is the rate of change of temperature with respect to time.
 The solution to this differential equation is given by:
-$<span class="math notranslate nohighlight">\(
-T(t) = T_a + (T_0 - T_a)e^{-kt}
-\)</span><span class="math notranslate nohighlight">\(
-We will try to estimate the cooling constant \)</span>k$ in this notebook.</p></li>
+$<span class="math notranslate nohighlight">\(  T(t) = T_a + (T_0 - T_a)e^{-kt}\)</span><span class="math notranslate nohighlight">\(We will try to estimate the cooling constant \)</span>k$ in this notebook.</p></li>
 </ul>
 <section id="experimental-setup">
 <h2>Experimental Setup<a class="headerlink" href="#experimental-setup" title="Link to this heading">#</a></h2>
@@ -525,9 +519,7 @@ We will try to estimate the cooling constant \)</span>k$ in this notebook.</p></
 <section id="simulate-the-cooling-process">
 <h2>2. Simulate the cooling process<a class="headerlink" href="#simulate-the-cooling-process" title="Link to this heading">#</a></h2>
 <p>We will simulate the cooling process using the formula:
-$<span class="math notranslate nohighlight">\(
-T(t) = T_a + (T_0 - T_a)e^{-kt}
-\)</span>$</p>
+$<span class="math notranslate nohighlight">\(T(t) = T_a + (T_0 - T_a)e^{-kt}\)</span>$</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Simulate the cooling process</span>
