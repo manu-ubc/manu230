@@ -467,8 +467,8 @@
   <section class="tex2jax_ignore mathjax_ignore" id="inverse-simulation-of-newton-s-law-of-cooling">
 <h1>Inverse Simulation of Newton’s Law of Cooling<a class="headerlink" href="#inverse-simulation-of-newton-s-law-of-cooling" title="Link to this heading">#</a></h1>
 <p>We will use the Newton’s Law of Cooling to simulate the temperature of a body that is cooling down. The Newton’s Law of Cooling is given by the following differential equation:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-04065149-88d2-450c-8ed6-b9f0f41947cf">
-<span class="eqno">(1)<a class="headerlink" href="#equation-04065149-88d2-450c-8ed6-b9f0f41947cf" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-a0767b45-ae39-4f4b-afe6-3e20f31371a8">
+<span class="eqno">(1)<a class="headerlink" href="#equation-a0767b45-ae39-4f4b-afe6-3e20f31371a8" title="Permalink to this equation">#</a></span>\[\begin{equation}
   \frac{dT}{dt} = -k(T - T_a)
 \end{equation}\]</div>
 <p>where:</p>
@@ -479,8 +479,8 @@
 <li><p><span class="math notranslate nohighlight">\(\frac{dT}{dt}\)</span> is the rate of change of temperature with respect to time.</p></li>
 </ul>
 <p>The solution to this differential equation is given by:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-b787bc36-20a2-46b5-aaaa-1a0594b74894">
-<span class="eqno">(2)<a class="headerlink" href="#equation-b787bc36-20a2-46b5-aaaa-1a0594b74894" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-5f886640-7338-4f6e-89ba-41f4c17965ee">
+<span class="eqno">(2)<a class="headerlink" href="#equation-5f886640-7338-4f6e-89ba-41f4c17965ee" title="Permalink to this equation">#</a></span>\[\begin{equation}
   T(t) = T_a + (T_0 - T_a)e^{-kt}
 \end{equation}\]</div>
 <p>We will try to estimate the cooling constant <span class="math notranslate nohighlight">\(k\)</span> in this notebook.</p>
@@ -514,11 +514,11 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define the parameters</span>
-<span class="n">T0</span> <span class="o">=</span> <span class="mf">70.0</span>  <span class="c1"># Initial temperature in degree Celsius</span>
-<span class="n">Ta</span> <span class="o">=</span> <span class="mf">20.0</span>   <span class="c1"># Ambient temperature in degree Celsius</span>
-<span class="n">k</span> <span class="o">=</span> <span class="mf">0.005</span>     <span class="c1"># Cooling constant - assumed a value for simulation</span>
-<span class="n">dt</span> <span class="o">=</span> <span class="mi">1</span>      <span class="c1"># Time step in seconds</span>
-<span class="n">time</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3600</span><span class="p">,</span> <span class="n">dt</span><span class="p">)</span>  <span class="c1"># Time interval for simulation - 1 hour (3600 seconds)</span>
+<span class="c1"># T0 =   # Initial temperature in degree Celsius</span>
+<span class="c1"># Ta =    # Ambient temperature in degree Celsius</span>
+<span class="c1"># k =      # Cooling constant - assumed a value for simulation</span>
+<span class="c1"># dt =       # Time step in seconds</span>
+<span class="c1"># time = np.arange(    )  # Time interval for simulation - 1 hour (3600 seconds)</span>
 </pre></div>
 </div>
 </div>
@@ -534,7 +534,7 @@ T(t) = T_a + (T_0 - T_a)e^{-kt}
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Simulate the cooling process</span>
-<span class="n">T</span> <span class="o">=</span> <span class="n">Ta</span> <span class="o">+</span> <span class="p">(</span><span class="n">T0</span> <span class="o">-</span> <span class="n">Ta</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">k</span> <span class="o">*</span> <span class="n">time</span><span class="p">)</span>
+<span class="c1"># T =</span>
 </pre></div>
 </div>
 </div>
@@ -546,20 +546,15 @@ T(t) = T_a + (T_0 - T_a)e^{-kt}
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Plot the results</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Temperature (℃)&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">Ta</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Ambient Temperature (℃)&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Cooling of Hot Water&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Time (seconds)&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Temperature (℃)&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="c1"># plt.figure(figsize=(10, 6))</span>
+<span class="c1"># plt.plot(                )</span>
+<span class="c1"># plt.title(&quot;               &quot;)</span>
+<span class="c1"># plt.xlabel(&quot;              &quot;)</span>
+<span class="c1"># plt.ylabel(&quot;              &quot;)</span>
+<span class="c1"># plt.legend()</span>
+<span class="c1"># plt.show()</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/41deb4098c6918e0e4124910a130716501ade0fe12b0a00d81e46dfdf4a1d62a.png" src="../_images/41deb4098c6918e0e4124910a130716501ade0fe12b0a00d81e46dfdf4a1d62a.png" />
 </div>
 </div>
 <p>Here, we can see that the temperature of the hot water decreases exponentially with time and approaches the ambient temperature <span class="math notranslate nohighlight">\(T_a = 20^\circ C\)</span>. The cooling constant <span class="math notranslate nohighlight">\(k\)</span> determines how quickly the temperature decreases. A higher value of <span class="math notranslate nohighlight">\(k\)</span> results in faster cooling, while a lower value of <span class="math notranslate nohighlight">\(k\)</span> results in slower cooling.
@@ -569,27 +564,22 @@ What does the cooling constant <span class="math notranslate nohighlight">\(k\)<
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Range of cooling constants to simulate different scenarios</span>
-<span class="n">k_values</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.0007</span><span class="p">,</span> <span class="mf">0.001</span><span class="p">,</span> <span class="mf">0.0015</span><span class="p">,</span> <span class="mf">0.002</span><span class="p">,</span> <span class="mf">0.005</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.02</span><span class="p">]</span>
-<span class="n">T_values</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">k_values</span><span class="p">:</span>
-    <span class="n">T</span> <span class="o">=</span> <span class="n">Ta</span> <span class="o">+</span> <span class="p">(</span><span class="n">T0</span> <span class="o">-</span> <span class="n">Ta</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">k</span> <span class="o">*</span> <span class="n">time</span><span class="p">)</span>
-    <span class="n">T_values</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">T</span><span class="p">)</span>
+<span class="c1"># k_values = [0.0007, 0.001, 0.0015, 0.002, 0.005, 0.01, 0.02]</span>
+<span class="c1"># T_values = []</span>
+
+<span class="c1"># Use a for loop to simulate the cooling process for different values of k</span>
 
 <span class="c1"># Let&#39;s plot the results for different values of k</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
-<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">k_values</span><span class="p">):</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">T_values</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;k = </span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">Ta</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Ambient Temperature (℃)&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Cooling of Hot Water for Different Cooling Constants&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Time (seconds)&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Temperature (℃)&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="c1"># plt.figure(figsize=(10, 6))</span>
+<span class="c1"># you can also use a for loop to plot the results</span>
+<span class="c1">#</span>
+<span class="c1"># plt.title(&quot;Cooling of Hot Water for Different Cooling Constants&quot;)</span>
+<span class="c1"># plt.xlabel(&quot;              &quot;)</span>
+<span class="c1"># plt.ylabel(&quot;              &quot;)</span>
+<span class="c1"># plt.legend()</span>
+<span class="c1"># plt.show()</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/db1e27887fea8f36a9a7bd917fc0874f3e02c1f78c148d5c6e54a63a7aca9d1f.png" src="../_images/db1e27887fea8f36a9a7bd917fc0874f3e02c1f78c148d5c6e54a63a7aca9d1f.png" />
 </div>
 </div>
 </section>
@@ -599,12 +589,8 @@ What does the cooling constant <span class="math notranslate nohighlight">\(k\)<
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import experimental data</span>
-<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;thermocouple_data.csv&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;unicode_escape&#39;</span><span class="p">)</span>
-<span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
-<span class="c1"># remove data above 70</span>
-<span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Thermocouple Reading (°C)&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">70</span><span class="p">]</span>
-<span class="c1"># adjust the timestamp</span>
-<span class="n">data</span><span class="p">[</span><span class="s1">&#39;Timestamp&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;Timestamp&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;Timestamp&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="c1"># data = pd.read_csv(&#39;thermocouple_data.csv&#39;, encoding=&#39;unicode_escape&#39;)</span>
+<span class="c1"># data.head()</span>
 </pre></div>
 </div>
 </div>
@@ -616,20 +602,8 @@ What does the cooling constant <span class="math notranslate nohighlight">\(k\)<
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Plot the experimental data</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Timestamp&#39;</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;Thermocouple Reading (°C)&#39;</span><span class="p">],</span> <span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Experimental Data&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">Ta</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Ambient Temperature (℃)&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Experimental Data: Cooling of Hot Water&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Time (seconds)&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Temperature (℃)&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/b31c5ed79f7b316f13ba1646b2bed9c926e61cb54732d4dde7b1af5384643050.png" src="../_images/b31c5ed79f7b316f13ba1646b2bed9c926e61cb54732d4dde7b1af5384643050.png" />
 </div>
 </div>
 </section>
@@ -639,62 +613,31 @@ What does the cooling constant <span class="math notranslate nohighlight">\(k\)<
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Plot the experimental data and simulation results</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Timestamp&#39;</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;Thermocouple Reading (°C)&#39;</span><span class="p">],</span> <span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Experimental Data&#39;</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">k_values</span><span class="p">):</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">T_values</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;k = </span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">Ta</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Ambient Temperature (℃)&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Experimental Data vs. Simulation: Cooling of Hot Water&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Time (seconds)&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Temperature (℃)&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/8a0da9ef64cf969ecab72915da3c4e3c5477e31e7a8bdeda752756777dffc4e2.png" src="../_images/8a0da9ef64cf969ecab72915da3c4e3c5477e31e7a8bdeda752756777dffc4e2.png" />
 </div>
 </div>
 </section>
 <section id="estimate-the-cooling-constant-k">
 <h2>7. Estimate the cooling constant k<a class="headerlink" href="#estimate-the-cooling-constant-k" title="Link to this heading">#</a></h2>
-<p>We will estimate the cooling constant <span class="math notranslate nohighlight">\(k\)</span> by fitting the experimental data to the Newton’s Law of Cooling equation.
-We will use the <code class="docutils literal notranslate"><span class="pre">numpy</span></code> library to find the best fit value of <span class="math notranslate nohighlight">\(k\)</span>.</p>
+<p>We will estimate the cooling constant <span class="math notranslate nohighlight">\(k\)</span> by fitting the experimental data to the Newton’s Law of Cooling equation.</p>
+<div class="amsmath math notranslate nohighlight" id="equation-5157f433-5c09-4840-a865-db3c94f8916a">
+<span class="eqno">(3)<a class="headerlink" href="#equation-5157f433-5c09-4840-a865-db3c94f8916a" title="Permalink to this equation">#</a></span>\[\begin{equation}
+k = -\frac{1}{t} \ln\left(\frac{T(t) - T_a}{T_0 - T_a}\right)
+\end{equation}\]</div>
+<p>where <span class="math notranslate nohighlight">\(T(t)\)</span> is the temperature at time <span class="math notranslate nohighlight">\(t\)</span>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># open the experimental data</span>
-<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;labview_data.csv&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;unicode_escape&#39;</span><span class="p">)</span>
-<span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
-<span class="c1"># rename the columns</span>
-<span class="n">data</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Timestamp&#39;</span><span class="p">,</span> <span class="s1">&#39;Temperature&#39;</span><span class="p">]</span>
-<span class="n">k</span> <span class="o">=</span> <span class="mf">0.0008</span>
-<span class="n">T0</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;Temperature&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">T0</span><span class="p">)</span>
-<span class="n">T_sim</span> <span class="o">=</span> <span class="n">Ta</span> <span class="o">+</span> <span class="p">(</span><span class="n">T0</span> <span class="o">-</span> <span class="n">Ta</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">k</span> <span class="o">*</span> <span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Timestamp&#39;</span><span class="p">]</span><span class="o">-</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Timestamp&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Estimate the cooling constant k</span>
+<span class="c1"># k values will change depending on the time intervals, for this case lets use the first 1500 s</span>
+<span class="c1"># k = -1/1500 * np.log((T - Ta) / (T0 - Ta))</span>
 
-<span class="c1"># plot the experimental data</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Timestamp&#39;</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;Temperature&#39;</span><span class="p">],</span> <span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Experimental Data&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Timestamp&#39;</span><span class="p">],</span> <span class="n">T_sim</span><span class="p">,</span> <span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Simulation&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">Ta</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Ambient Temperature (℃)&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Experimental Data: Cooling of Hot Water&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Time (seconds)&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Temperature (℃)&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="c1"># plot the experimental data with simulated results for estimated k</span>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>94.525865
-</pre></div>
 </div>
-<img alt="../_images/6ccafe1ced1629f284e10e661f59da9af147d37381040546438db10b15092191.png" src="../_images/6ccafe1ced1629f284e10e661f59da9af147d37381040546438db10b15092191.png" />
-</div>
-</div>
+<p>How does the curve fit the experimental data? Is it a good fit? Why or why not?</p>
 </section>
 </section>
 
