@@ -1081,7 +1081,7 @@ dtype: float64
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Find the maximum value in column &#39;TR-P&#39; as well as the index/location in the data set that this occurs</span>
 <span class="n">max_temp</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;TR-P&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
-<span class="n">max_temp_index</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;TR-A&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">idxmax</span><span class="p">()</span>
+<span class="n">max_temp_index</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;TR-P&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">idxmax</span><span class="p">()</span>
 
 <span class="c1"># Find the temperature in the MRCC at this max temp</span>
 <span class="n">MRCC_value</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">max_temp_index</span><span class="p">,</span> <span class="s2">&quot;MRCC&quot;</span><span class="p">]</span>
